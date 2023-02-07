@@ -3,15 +3,16 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Unbounded', cursive;
-    background-image:url("../media/logo/nen1.jpg");
+    background-image:url("../media/logo/nen.jpg");
     background-repeat: repeat;
+    color: #bacbe6;
 
 }
 section.section1{
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background: url(../media/logo/anh.png);
+    background: url(../media/logo/background.jpg);
     background-size: cover;
 }
 .dong{
