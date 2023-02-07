@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background-image:url("../media/nen.png");
 }
 section.section1{
     width: 100%;
@@ -9,6 +10,24 @@ section.section1{
     box-sizing: border-box;
     background: url(../media/logo/anh.png);
     background-size: cover;
+}
+.dong{
+    transform: translate(900px,250px);
+    width: 50px;
+    height: 50px;
+    background-image: url("../media/astronaut.png");
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    position:relative;
+}
+@keyframes example {
+    0%   {background-image:url("../media/astronaut.png");left:0px; top:0px;}
+    25%  {background-image:url("../media/astronaut.png"); left:60px; top:0px;}
+    50%  {background-image:url("../media/astronaut.png"); left:60px; top:60px;}
+    75%  {background-image:url("../media/astronaut.png"); left:0px; top:60px;}
+    100% {background-image:url("../media/astronaut.png"); left:0px; top:0px;}
 }
 
 
