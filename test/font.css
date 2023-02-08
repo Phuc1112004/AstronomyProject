@@ -14,6 +14,7 @@ section.section1{
     height: 100vh;
     box-sizing: border-box;
     background-image: url(../media/logo/background.jpg);
+    opacity: 80%;
     background-size: 100%;
     background-repeat:no-repeat ;
 
@@ -23,7 +24,7 @@ section.section1{
     font-size: 70px;
     margin: 20px 0;
     text-align: left;
-    color: #ffb700;
+    color: #ffffff;
     font-family: "serif";
 }
 
@@ -148,7 +149,7 @@ nav ul li a:hover{
     background-color: #333;
     transition: background-color 0.5s ease;
     height: 80px;
-    color:#ffc107;
+    color:#ffffff;
 
     background: rgba(0,0,0,0.4);
     box-shadow: 0 1px 1px rgba(0,0,0,0.12),
@@ -164,10 +165,6 @@ nav ul li a:hover{
     background-image: url("../media/logo/nen.jpg");
 }
 
-.active{
-    background: #f0f0f0;
-
-}
 
 
 
