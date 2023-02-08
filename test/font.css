@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -8,26 +8,25 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
 
 }
-section.section1{
+section.section1 {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
     background-image: url(../media/logo/background.jpg);
-    opacity: 0.8;
+    opacity: 0.85;
     background-size: 100%;
-    background-repeat:no-repeat ;
-
-
+    background-repeat: no-repeat;
 }
+
 #text {
     font-size: 70px;
     margin: 20px 0;
     text-align: left;
     color: #ffffff;
-    font-family: "serif";
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 
