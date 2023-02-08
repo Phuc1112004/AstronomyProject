@@ -2,62 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="../list/css/bootstrap.css">
-    <link rel="stylesheet" href="../test/font.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy</title>
+    <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
+    <link rel="stylesheet" href="../home/home.css">
 </head>
 <body>
 
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+
+
+<nav class="navbar navbar-expand trongsuot "  id="navbarSupportedContent">
+    <div class="container-fluid " >
+
+        <div class="brand collapse navbar-collapse">
+
+            <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px"></h2>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Pricing</a>
-                <a class="nav-link disabled">Disabled</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="active " aria-current="page"  href="#"> Home</a></li>
+            <li class="nav-item">
+                    <div class="dropdown">
+                    <button class="dropbtn"><a>PAGES</a></button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a>HISTORY</a></button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a>BLOG</a></button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a  href="">Contact</a></li>
+        </ul>
+    </div>
+
+</nav>
+
+<section class="section1">
+
+    <div class=" container">
+        <div class="row">
+            <div class="col-6"><br><br><br><br><br>
+                <h1 id="text"></h1>
             </div>
+            <div class="col-6"><br><br><br><br><br><br>
+                <div class="dong">
+                    <img id ="myImage" src="../media/astronaut.png" style="height: 400px;width: 400px" alt="...">
+                </div></div>
         </div>
     </div>
-</nav>
+</section>
 
 
-<nav class="navbar navbar-expand-lg border border-1" style="text-align: center">
-    <div class="container-fluid">
-        <a class="navbar-brand col-3" href="#"><img src="../media/logo/logo.jpg" height="100px" width="110px"/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse col-4" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link home-click" href="home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about-us02.html">Pages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="shop.html">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
+<!--chữ chạy-->
+<marquee class="marqueee " width="30%">Welcome to PVTH astronomy website</marquee>
 
-
-        <div class="col-2" style="font-size: x-large">
-            <i class="bi bi-search"></i>
-        </div>
+<main>
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+    <section class="section2 text-center">
+        <h2>WE ARE AN ASTRONOMY COMPANY</h2>
+    </section>
+    <hr class="stylish-hr">
+    <div class="Introduction-to-astronomy text-center">
+        <p id="Introduction">Astronomy is the scientific study of celestial bodies (such as stars, planets, comets,
+            nebulae, clusters, galaxies) and phenomena originating outside the universe (such as cosmic background
+            radiation). For those of you who are new to learning, you should start from studying easily
+            observable objects such as the Moon, Saturn, Jupiter, constellations ...
+            then gradually other objects as experienced.
+        </p>
     </div>
-</nav>
+
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+</main>
+
+<!--footer cứ cop rồi gắn vào-->
+<footer class="text-center text-lg-start bg-light text-muted" ><br>
+
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="#">PhucTrinh.com</a>
+    </div>
+</footer>
+<script src="../test/test.js"></script>
+
 </body>
 </html>

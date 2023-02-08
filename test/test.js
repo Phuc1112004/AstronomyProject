@@ -8,7 +8,7 @@ window.onscroll = function() {
 };
 
 
-const text = "It's a brilliant";
+const text = "It's a brilliant " + "surface in that sun light";
 const textElement = document.getElementById("text");
 let index = 0;
 
