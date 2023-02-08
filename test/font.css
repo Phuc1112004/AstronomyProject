@@ -7,6 +7,7 @@ body{
     background-repeat: repeat;
     color: #bacbe6;
 
+
 }
 section.section1{
     width: 100%;
@@ -15,6 +16,7 @@ section.section1{
     background-image: url(../media/logo/background.jpg);
     background-size: 100%;
     background-repeat:no-repeat ;
+
 
 }
 .dong{
@@ -40,7 +42,7 @@ section.section1{
 }
 
 
-nav{
+nav.trongsuot{
     position: fixed;
     top: 0;
     left: 0;
@@ -54,6 +56,7 @@ nav{
     0 4px 4px rgba(0,0,0,0.12),
     0 8px 8px rgba(0,0,0,0.12),
     0 16px 16px rgba(0,0,0,0.12);
+    z-index: 999;
 }
 .marqueee{
     text-shadow: 0 1px 2px;
