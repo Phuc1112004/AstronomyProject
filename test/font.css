@@ -151,7 +151,8 @@ nav ul li a:hover{
 }
 
 #navbarSupportedContent.scrolled {
-    background-color: #373b3e;
+    background-color: #142237;
+    background-image: url("../media/logo/nen.jpg");
 }
 
 .active{
