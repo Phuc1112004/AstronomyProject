@@ -7,3 +7,17 @@ window.onscroll = function() {
         navbar.classList.add("scrolled");
     }
 };
+
+const text = "It's a brilliant";
+const textElement = document.getElementById("text");
+let index = 0;
+
+function type() {
+    if (index < text.length) {
+        textElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+    }
+}
+
+type();
