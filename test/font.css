@@ -2,11 +2,13 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Unbounded', cursive;
     background-image:url("../media/logo/nen.jpg");
     background-repeat: repeat;
     color: #bacbe6;
-
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 }
 section.section1{
@@ -136,12 +138,15 @@ nav ul li a:hover{
     color: #f9fcfd;
     font-size: 32px;
     text-shadow: 0 1px 2px;
+    text-transform: uppercase;
 }
 .stylish-hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));
     margin-bottom: 65px;
+    text-decoration-line:overline;
+    text-decoration-style: dashed;
 }
 
 
@@ -163,6 +168,24 @@ nav ul li a:hover{
 #navbarSupportedContent.scrolled {
     background-color: #142237;
     background-image: url("../media/logo/nen.jpg");
+}
+.Introduction-to-astronomy.Introduction{
+    font-family: "Open Sans";
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9eb4cc;
+    font-size: 14px;
+    background-color: #16263d;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: inherit;
+
+}
+#Introduction {
+    white-space:pre-wrap;
+
 }
 
 
