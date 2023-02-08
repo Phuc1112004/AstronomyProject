@@ -79,6 +79,7 @@ nav ul{
 }
 nav ul li{
     list-style: none;
+    font-size: 90%;
 }
 nav ul li a{
     position: relative;
