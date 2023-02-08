@@ -9,26 +9,20 @@ body{
 
 
 }
-section.text-center_p-xl-5{
+section.section1{
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
     background-image: url(../media/logo/background.jpg);
     background-size: 100%;
     background-repeat:no-repeat ;
-}
-#text {
-    font-size: 70px;
-    margin: 10px 0;
-    text-align: left;
-    color: rgb(250, 230, 5);
-    font-family: serif;
-}
 
+
+}
 .dong{
-    transform: translate(1500%,300%);
-    width: 0;
-    height: 0;
+    transform: translate(1200%,450%);
+    width: 50px;
+    height: 50px;
     background-image: url("../media/astronaut.png");
     position: relative;
     animation-name: example;
@@ -162,7 +156,7 @@ nav ul li a:hover{
 }
 
 .active{
-
+    background: #f0f0f0;
 
 }
 
