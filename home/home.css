@@ -28,7 +28,16 @@ section.section1 {
     color: #ffffff;
     font-family: 'Chakra Petch', sans-serif;
 }
-
+.char {
+    display: inline-block;
+    opacity: 0;
+    animation: type 6s forwards;
+}
+@keyframes type {
+    to {
+        opacity: 1;
+    }
+}
 
 .dong{
     transform: translate(1200%,450%);
@@ -45,11 +54,11 @@ section.section1 {
 
 }
 @keyframes example{
-    0%   {background-image:url("../media/astronaut.png");right:0px; top:0px;}
-    25%  {background-image:url("../media/astronaut.png"); right:30px; top:0px;}
+    0%   {background-image:url("../media/astronaut.png");right:0; top:0;}
+    25%  {background-image:url("../media/astronaut.png"); right:30px; top:0;}
     50%  {background-image:url("../media/astronaut.png"); right:30px; top:30px;}
-    75%  {background-image:url("../media/astronaut.png"); right:0px; top:30px;}
-    100% {background-image:url("../media/astronaut.png"); right:0px; top:0px;}
+    75%  {background-image:url("../media/astronaut.png"); right:0; top:30px;}
+    100% {background-image:url("../media/astronaut.png"); right:0; top:0;}
 }
 
 
