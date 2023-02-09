@@ -44,6 +44,26 @@ section.section1{
     opacity: 0;
     animation: type 6s forwards;
 }
+.char.btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.btn {
+    color: white;
+    padding: 10px 20px;
+    border: ridge #819ee7;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #063896;
+    cursor: pointer;
+}
 
 @keyframes type {
     to {
