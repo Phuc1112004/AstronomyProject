@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Astronomy</title>
-  <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
-  <link rel="stylesheet" href="font.css">
+  <title>Contact</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
+  <link rel="stylesheet" href="../home/home.css">
+  <link rel="stylesheet" href="contact.css">
+
+
 </head>
 <body>
-
-
 
 
 <nav class="navbar navbar-expand trongsuot "  id="navbarSupportedContent">
@@ -19,47 +19,62 @@
 
     <div class="brand collapse navbar-collapse">
 
-      <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 100px"></h2>
+      <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px"></h2>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item"><a class="active " aria-current="page"  href="#"> Home</a></li>
-      <li class="nav-item"><a  href="">Pages</a></li>
-      <li class="nav-item"><a  href="">History</a></li>
-      <li class="nav-item"><a  href=""> Blog</a></li>
+      <li class="nav-item">
+        <div class="dropdown">
+          <button class="dropbtn"><a>PAGES</a></button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown">
+          <button class="dropbtn"><a>HISTORY</a></button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown">
+          <button class="dropbtn"><a>BLOG</a></button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </li>
       <li class="nav-item"><a  href="">Contact</a></li>
     </ul>
   </div>
 
 </nav>
-<script>
-  window.onscroll = function() {
-    var navbar = document.getElementById("navbarSupportedContent");
-    if (window.pageYOffset === 0) {
-      navbar.classList.remove("scrolled");
-    } else {
-      navbar.classList.add("scrolled");
-    }
-  };
-</script>
 
+<header>
+  <p style="font-size: 40px">CONTACTS</p>
+  <p style="font-size: 13px">HOME // contact</p>
+</header>
+<div class="container">
+  <div id="map" style="height: 400px; width: 100%" >
 
-
-
-
-
-
-<section class="section1">
-  <div class="dong">
-    <img id ="myImage" src="../media/astronaut.png" style="height: 300px;width: 300px" alt="...">
   </div>
-</section>
+</div>
 
 
 <!--chữ chạy-->
-<marquee class="marqueee" width="30%">Welcome to PVTH astronomy website</marquee>
+<marquee class="marqueee " width="30%">Welcome to PVTH astronomy website</marquee>
 
 <main>
   <!--        viết code ở đây-->
@@ -67,27 +82,119 @@
   <!--        viết code ở đây-->
   <section class="section2 text-center">
     <h2>WE ARE AN ASTRONOMY COMPANY</h2>
-    <hr class="stylish-hr">
-
-
   </section>
+  <hr class="stylish-hr">
+  <div class="Introduction-to-astronomy text-center">
+    <p id="Introduction">Astronomy is the scientific study of celestial bodies (such as stars, planets, comets,
+      nebulae, clusters, galaxies) and phenomena originating outside the universe (such as cosmic background
+      radiation). For those of you who are new to learning, you should start from studying easily
+      observable objects such as the Moon, Saturn, Jupiter, constellations ...
+      then gradually other objects as experienced.
+    </p>
+  </div>
+
   <!--        viết code ở đây-->
   <!--        viết code ở đây-->
   <!--        viết code ở đây-->
   <!--        viết code ở đây-->
+
   <!--        viết code ở đây-->
   <!--        viết code ở đây-->
 </main>
 
-<!--footer cứ cop rồi gắn vào-->
-<footer class="text-center text-lg-start bg-light text-muted" ><br>
 
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2022 Copyright:
+
+<!--footer cứ cop rồi gắn vào-->
+
+
+
+<footer class="text-center text-lg-start bg-light text-muted card-footer" ><br>
+  <div class="col-12 text-center footer-icon">
+    <div class="container " style="text-align: center">
+      <div class="row text-center ">
+        <div class="col-3"></div>
+          <div>
+            &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2 "><i class="bi bi-facebook"></i></button>
+            &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-google"></i></button>
+            &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-pinterest"></i> </button>
+            &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-twitter"></i> </button>
+            &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-whatsapp"></i> </button>
+            &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-linkedin"></i> </button>
+          </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center text-md-start mt-5 ">
+    <div class="row mt-3">
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <a class="card-footercol-3" href="../home/home.html"><img src="../media/logo/logo.jpg" alt="..." style="width: 200px;height: 120px;padding-left: 10px"></a>
+        <p><i class="bi bi-globe-asia-australia" style="color: white;font-size: 20px"></i>&ensp;101 West Street, New York, NY 12345</p>
+
+        <p><i class="bi bi-telephone-inbound" style="color: white"></i>&ensp; +84 999 999 999 </p>
+        <p><i class="bi bi-envelope-open" style="color: white"></i>&ensp; abcd123@gmail.com</p>
+        <p><i class="bi bi-facebook"></i>&ensp;
+          <i class="bi bi-twitter"></i>&ensp;
+          <i class="bi bi-youtube"></i>&ensp;
+          <i class="bi bi-instagram"></i>&ensp;
+          <i class="bi bi-tiktok"></i>&ensp;
+        </p>
+      </div>
+      <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4 table-hover">
+        <h4 class="text-uppercase fw-bold mb-4" style="color: whitesmoke">
+          RECENT POSTS
+        </h4>
+        <h5 style="color: #9eb4cc">How many galaxies are in the known universe?</h5><br>
+        <p>Fusce vel mauris vel nulla pellentesque egestas. In vestibulum risus nec nisi...<br><br>August 6, 2014</p>
+      </div>
+
+      <div class="card col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
+        <div class="card-body" >
+          <h5 class="card-title">Subscribe newsletter</h5>
+          <p class="card-text" style="color: #4f5050">Enter your email to receive our latest update and offer !</p>
+          <form class="mb-3" name="form" action="#" method="get">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]8,$">
+           <br>
+            <button style="background-color: #1e2125;width: 150px;height: 40px" ><h6 style="padding-top: 8px;color: white">SUBCRIBE NOW</h6></button>
+          </form><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-4" style="background: rgba(0,0,0,0.3);">
+    © 2023 Copyright:
     <a class="text-reset fw-bold" href="#">PhucTrinh.com</a>
   </div>
 </footer>
+<script src="../test/test.js"></script>
 
+<script type="text/javascript">
+  var lat=0;
+  var long = 0;
+  navigator.geolocation.getCurrentPosition(function (position) {
+    lat =  position.coords.latitude;
+    long = position.coords.longitude;
+    console.log(lat);
+    console.log(long);
+    initMap();
 
+  })
+  let map;
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 24.8377372, lng: 55.4019221 },
+      zoom: 10,
+    });
+  }
+
+  window.initMap = initMap;
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap&v=weekly"
+        defer
+></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+header{
+    background-image: url("../media/logo/background-header.jpg");
+    background-repeat: no-repeat;
+    width:  100%;
+    height: 200px;
+}
+header p{
+    display: flex;
+    float: left;
+}
