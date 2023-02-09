@@ -1,3 +1,4 @@
+
 window.onscroll = function() {
     var navbar = document.getElementById("navbarSupportedContent");
     if (window.pageYOffset === 0) {
@@ -19,7 +20,10 @@ function type() {
 
         setTimeout(type, 90);
 
+
     }
 }
 
 type();
+
+

@@ -33,6 +33,7 @@ section.section1{
     color: #ffffff;
     font-family: 'Chakra Petch', sans-serif;
     white-space:pre-wrap;
+    z-index: 1;
 }
 #chuchay{
     font-size: 36px;
@@ -223,6 +224,7 @@ nav ul li a:hover{
 .stylish-hr {
     border: 0;
     height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 111, 254), rgba(0, 0, 0, 0));
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));
     margin-bottom: 65px;
     text-decoration-line:overline;
@@ -354,6 +356,10 @@ nav ul li a:hover{
     text-decoration:none;
 
 }
+.card1{
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
 
 .viet {
     white-space: nowrap;
@@ -372,11 +378,33 @@ nav ul li a:hover{
     from{width: 0;}
     to{width: 472px;}
 }
+.h22{
+    font-family: Quantico;
+    line-height: 32px;
+    font-weight: 700;
+    font-style: normal;
+    color: #f9fcfd;
+    font-size: 30px;
+    font-display: swap;
+    padding: 0;
+    margin: 0 0 1em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    text-align: left;
+    line-height: 1.2em;
+}
 
+.hrr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 111, 254), rgba(0, 0, 0, 0));
+    margin-bottom: 65px;
+    text-decoration-line:overline;
+    text-align: left;
+    width: 40%;
 
-
-
-
-
-
-
+}
+.wp-slider {
+    display: flex;
+}

@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronomy</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
     <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="../test/font.css">
+
+
+
+
 </head>
 <body>
 
 <nav class="navbar navbar-expand trongsuot "  id="navbarSupportedContent">
     <div class="container-fluid " >
 
-    <div class="brand collapse navbar-collapse">
+        <div class="brand collapse navbar-collapse">
 
-        <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px" alt=""></h2>
-    </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px" alt=""></h2>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="active " aria-current="page"  href="#"> Home</a></li>
             <li class="nav-item">
@@ -56,33 +60,60 @@
             <li class="nav-item"><a  href="">Contact</a></li>
         </ul>
     </div>
-
+<script>window.onscroll = function() {
+    var navbar = document.getElementById("navbarSupportedContent");
+    if (window.pageYOffset === 0) {
+        navbar.classList.remove("scrolled");
+    } else {
+        navbar.classList.add("scrolled");
+    }
+}; </script>
 </nav>
 
 
 <section class="section1">
-       <div class=" container">
+    <div class=" container">
 
-               <div id="background-video">
-                   <video autoplay loop muted>
-                       <source src="../media/video/Traidat.mp4" type="video/mp4">
-                   </video>
-               </div>
-           <div class="row">
-           <div class="col-6 giua">
-               <h1 id="text"></h1>
-               <p class="viet">surface in that sunlight</p>
+        <div id="background-video">
+            <video autoplay loop muted>
+                <source src="../media/video/Traidat.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="row">
+            <div class="col-6 giua">
+                <h1 id="text"></h1>
+                <p class="viet">surface in that sunlight</p>
+            </div>
 
-           </div>
-           <div class="col-6">
-        <div class="dong">
-            <img id ="myImage" src="../media/astronaut.png" style="height: 300px;width: 300px" alt="...">
-        </div></div>
-       </div>
-       </div>
-        <script src="test.js"></script>
+            <div class="col-6">
+                <div class="dong">
+                    <img id ="myImage" src="../media/astronaut.png" style="height: 300px;width: 300px" alt="...">
+                </div></div>
+        </div>
+    </div>
+    <script>
 
-    </section>
+        const text = "It's a brilliant";
+        const textElement = document.getElementById("text");
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                textElement.innerHTML += text.charAt(index);
+                index++;
+
+                setTimeout(type, 90);
+
+
+            }
+        }
+
+        type();
+
+
+    </script>
+
+</section>
 
 
 <!--chữ chạy-->
@@ -95,15 +126,15 @@
     <section class="section2 text-center">
         <h2>WE ARE AN ASTRONOMY COMPANY</h2>
     </section>
-        <hr class="stylish-hr">
-        <div class="Introduction-to-astronomy text-center">
+    <hr class="stylish-hr">
+    <div class="Introduction-to-astronomy text-center">
         <p id="Introduction">Astronomy is the scientific study of celestial bodies (such as stars, planets, comets,
             nebulae, clusters, galaxies) and phenomena originating outside the universe (such as cosmic background
             radiation). For those of you who are new to learning, you should start from studying easily
             observable objects such as the Moon, Saturn, Jupiter, constellations ...
             then gradually other objects as experienced.
         </p>
-        </div>
+    </div>
     <div class="container">
         <div class="row row-cols-2 card-group card1">
             <div class="col-3">
@@ -168,7 +199,30 @@
             </div>
 
         </div>
+        <div class="row">
+            <div class="col-10">
+                <h2 class="h22">
+                    Recent Projects
+                    <hr class="hrr">
+                </h2>
+            </div>
+            <div>
+                <h2>
+                </h2>
+            </div>
+        </div>
+
+
+        </h2>
+
+
+
+
     </div>
+
+
+
+
 
     <!--        viết code ở đây-->
     <!--        viết code ở đây-->
