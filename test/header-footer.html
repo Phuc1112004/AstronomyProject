@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronomy</title>
     <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="font.css">
 </head>
 <body>
-
-
-
 
 <nav class="navbar navbar-expand trongsuot "  id="navbarSupportedContent">
     <div class="container-fluid " >
@@ -22,61 +20,66 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="active " aria-current="page"  href="#"> Home</a></li>
-        <li class="nav-item"><a  href="">Pages</a></li>
-        <li class="nav-item"><a  href="">History</a></li>
-        <li class="nav-item"><a  href=""> Blog</a></li>
-        <li class="nav-item"><a  href="">Contact</a></li>
-    </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="active " aria-current="page"  href="#"> Home</a></li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a>PAGES</a></button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a>HISTORY</a></button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a>BLOG</a></button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a  href="">Contact</a></li>
+        </ul>
     </div>
-
 </nav>
 
-<section class="section1">
 
+<section class="section1">
        <div class=" container">
+
+               <div id="background-video">
+                   <video autoplay loop muted>
+                       <source src="../media/video/Traidat.mp4" type="video/mp4">
+                   </video>
+               </div>
            <div class="row">
-           <div class="col-6"><br><br><br><br><br>
+           <div class="col-6 giua">
                <h1 id="text"></h1>
-               <p style="  font-size: 27px;line-height: 10px;text-align: left;color: #ffffff;letter-spacing: -3px;">
-                   <span class="char" data-char="s">s</span>
-                   <span class="char" data-char="u">u</span>
-                   <span class="char" data-char="r">r</span>
-                   <span class="char" data-char="f">f</span>
-                   <span class="char" data-char="a">a</span>
-                   <span class="char" data-char="c">c</span>
-                   <span class="char" data-char="e">e</span>
-                   <span class="char" data-char=" "> </span>
-                   <span class="char" data-char=" "> </span>
-                   <span class="char" data-char="i">i</span>
-                   <span class="char" data-char="n">n</span>
-                   <span class="char" data-char=" "> </span>
-                   <span class="char" data-char=" "> </span>
-                   <span class="char" data-char="t">t</span>
-                   <span class="char" data-char="h">h</span>
-                   <span class="char" data-char="a">a</span>
-                   <span class="char" data-char="t">t</span>
-                   <span class="char" data-char=" "> </span>
-                   <span class="char" data-char=" "> </span>
-                   <span class="char" data-char="s">s</span>
-                   <span class="char" data-char="u">u</span>
-                   <span class="char" data-char="n">n</span>
-                   <span class="char" data-char=" "> </span>
-                   <span class="char" data-char=" "> </span>
-                   <span class="char" data-char="l">l</span>
-                   <span class="char" data-char="i">i</span>
-                   <span class="char" data-char="g">g</span>
-                   <span class="char" data-char="h">h</span>
-                   <span class="char" data-char="t">t</span>
-               </p><br>
+               <p class="viet">surface in that sunlight</p>
+
            </div>
-           <div class="col-6"><br><br><br><br><br><br>
+           <div class="col-6">
         <div class="dong">
-            <img id ="myImage" src="../media/astronaut.png" style="height: 400px;width: 400px" alt="...">
+            <img id ="myImage" src="../media/astronaut.png" style="height: 300px;width: 300px" alt="...">
         </div></div>
        </div>
        </div>
+        <script src="test.js"></script>
+
     </section>
 
 
@@ -99,6 +102,71 @@
             then gradually other objects as experienced.
         </p>
         </div>
+    <div class="container">
+        <div class="row row-cols-2 card-group card1">
+            <div class="col-3">
+                <div class="card p-3 g-5 background" style="width: 14rem;">
+                    <div class="card-body ten">
+                        <span class="card-title"><i class="bi bi-gear icon-color"><hr class="gach"></i></span>
+                        <h3 class="card-text write">SOLAR
+                            SYSTEM</h3>
+                        <p class="font">Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit.</p>
+                    </div>
+                    <div class="card-body right">
+                        <a href="#" class="card-link read-more">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card p-3 g-5 background" style="width: 14rem;">
+                    <div class="card-body ten">
+                        <span class="card-title"><i class="bi bi-globe-central-south-asia icon-color"></i><hr class="gach"></i></span>
+                        <h3 class="card-text write">PLANET
+                            EARTH</h3>
+                        <p class="font">Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit.</p>
+                    </div>
+                    <div class="card-body right">
+                        <a href="#" class="card-link read-more">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card p-3 g-5 background" style="width: 14rem;">
+                    <div class="card-body ten">
+                        <span class="card-title"><i class="bi bi-airplane-engines-fill icon-color"></i><hr class="gach"></i></span>
+                        <h3 class="card-text write">SPACE
+                            PROJECTS</h3>
+                        <p class="font">Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit.</p>
+                    </div>
+                    <div class="card-body right">
+                        <a href="#" class="card-link read-more">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card p-3 g-5 background" style="width: 14rem;">
+                    <div class="card-body ten">
+                        <span class="card-title"><i class="bi bi-lightbulb-fill icon-color"></i><hr class="gach"></i></span>
+                        <h3 class="card-text write">ASTRONOMY
+                            IDEAS</h3>
+                        <p class="font">Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit.</p>
+                    </div>
+                    <div class="card-body right">
+                        <a href="#" class="card-link read-more">read more</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!--        viết code ở đây-->
     <!--        viết code ở đây-->
@@ -116,7 +184,9 @@
         <a class="text-reset fw-bold" href="#">PhucTrinh.com</a>
     </div>
 </footer>
-<script src="test.js"></script>
+
+
+
 
 </body>
 </html>

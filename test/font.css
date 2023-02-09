@@ -8,18 +8,23 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: Quantico;
 
 }
-section.section1 {
+section.section1{
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background-image: url(../media/logo/background.jpg);
     opacity: 0.85;
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat ;
+
 }
+.giua{
+    margin-top: 150px;
+
+}
+
 
 #text {
     font-size: 70px;
@@ -27,6 +32,12 @@ section.section1 {
     text-align: left;
     color: #ffffff;
     font-family: 'Chakra Petch', sans-serif;
+    white-space:pre-wrap;
+}
+#chuchay{
+    font-size: 36px;
+    display: inline-block;
+
 }
 .char {
     display: inline-block;
@@ -39,6 +50,22 @@ section.section1 {
         opacity: 1;
     }
 }
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
 
 
 .dong{
@@ -52,8 +79,7 @@ section.section1 {
     animation-timing-function: linear;
     animation-delay: 2s;
     animation-iteration-count: infinite;
-
-
+    margin-top:200px;
 }
 @keyframes example{
     0%   {background-image:url("../media/astronaut.png");right:0; top:0;}
@@ -115,7 +141,10 @@ nav ul li a{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    transition: 0.5s
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
 }
 
 nav ul li a:before{
@@ -146,10 +175,31 @@ nav ul li a:hover{
     font-weight: 700;
     font-style: normal;
     color: #f9fcfd;
-    font-size: 32px;
-    text-shadow: 0 1px 2px;
+    /*font-size: 32px;*/
     text-transform: uppercase;
+    text-shadow: 2px 2px 5px #ffffff;
+    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
+    -webkit-background-clip: text;
 }
+/*h1 {*/
+/*    background-image: linear-gradient(to right, yellow, yellow);*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*    background-repeat: no-repeat;*/
+/*    animation: shine 4s ease-in-out infinite;*/
+/*}*/
+
+/*@keyframes shine {*/
+/*    from {*/
+/*        background-position: 0 100px;*/
+/*    }*/
+/*    to {*/
+/*        background-position: 0 -100px;*/
+/*    }*/
+/*}*/
+
 .stylish-hr {
     border: 0;
     height: 1px;
@@ -180,6 +230,10 @@ nav ul li a:hover{
     background-image: url("../media/logo/nen.jpg");
 }
 .Introduction-to-astronomy.Introduction{
+
+
+}
+#Introduction {
     font-family: "Open Sans";
     line-height: 24px;
     font-weight: 400;
@@ -191,12 +245,114 @@ nav ul li a:hover{
     background-attachment: scroll;
     background-position: center top;
     background-size: inherit;
-
-}
-#Introduction {
+    visibility: visible;
     white-space:pre-wrap;
 
 }
+.dropbtn {
+    background: rgba(0,0,0,0);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn:hover{
+    color: black;
+}
+.gach {
+    width: 20%;
+    height: 2px;
+    background-color: gray;
+    border: none;
+}
+.ten{
+    display: block;
+}
+.right{
+    text-align: right;
+}
+.background{
+    background: rgba(0, 0, 0, 0);
+}
+.write{
+    font-size: 24px;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    color: #f9fcfd;
+}
+.font{
+    font-family: "Open Sans";
+    text-align: left;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9eb4cc;
+    font-size: 14px;
+}
+.icon-color{
+    color: #14a5d3;
+}
+.read-more{
+    font-size: 11px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 700;
+    line-height: 20px;
+    color: #5c6777;
+    font-family: 'Open Sans',sans-serif;
+}
+.right a{
+    text-decoration:none;
+
+}
+
+.viet {
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 28px;
+    color: rgb(249, 252, 253);
+}
+
+.viet {
+    animation: animated-text 3s steps(30,end) 2s 1 normal both;
+}
+
+
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+}
+
 
 
 
