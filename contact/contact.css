@@ -10,3 +10,17 @@ header{
     height: 180px;
     color: white;
 }
+.section2 p{
+    font-size: small;
+}
+.section2 i{
+    font-size: 30px;
+}
+.hrr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 111, 254), rgba(0, 0, 0, 0));
+    margin-bottom: 65px;
+    text-decoration-line:overline;
+
+}
