@@ -468,4 +468,23 @@ button:hover{
     cursor: pointer;
 }
 
+input[name=tabs]{
+    display:none;
+}
+input[name=tabs] + label{
+    padding:5px;
+    background: #024873;
+    border-radius:5px;
+    color:white;
 
+}
+input[name=tabs]:checked + label{
+    font-weight:bold;
+    border:solid 1px #724e96;
+}
+.tab-content{
+    display:none;
+}
+#tab1:checked ~ #tab-content1, #tab2:checked ~ #tab-content2,  #tab3:checked ~ #tab-content3 {
+    display:block;
+}
