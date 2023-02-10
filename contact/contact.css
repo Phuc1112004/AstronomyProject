@@ -24,3 +24,6 @@ header{
     text-decoration-line:overline;
 
 }
+.contact-form{
+    display: flex;
+}
