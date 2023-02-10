@@ -66,8 +66,8 @@
 </header>
 
 
-<div class="container">
-  <div id="map" style="height: 400px; width: 100%" >
+<div class="container" style="max-width: unset; min-width: 100%;padding: 0">
+  <div id="map" style="height: 400px; width: 100%">
 
   </div>
 </div>
@@ -124,7 +124,7 @@
          <div class="col"></div>
           <div class="mb-1 p-3 col-6">
             <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" placeholder="Say some thing" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
         </div>
       <div class="contact-form">
@@ -134,10 +134,10 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <button type="submit" class="btn  text-center ">Send Message</button></div>
+          <button class="button-send" ><h6 style="padding-top: 8px;color: #FFFFFF">Send </h6></button></div>
         </div>
       </form>
-  <hr class="stylish-hr">
+  <hr class="hrr">
 
   <!--        viết code ở đây-->
   <!--        viết code ở đây-->
@@ -233,6 +233,7 @@
     map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: 16, lng: 108 },
       zoom: 5,
+      credits: false
     });
   }
 

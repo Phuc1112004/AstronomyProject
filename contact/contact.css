@@ -1,5 +1,5 @@
 header{
-    background-image: url("../media/img.png");
+    background-image: url("../media/img123.png");
     position: relative;
     margin: 0;
     padding-top: 100px;
@@ -26,4 +26,10 @@ header{
 }
 .contact-form{
     display: flex;
+}
+.button-send{
+    border-image: -webkit-linear-gradient(45deg, #14a5d3, #20baa0) 10 stretch;
+    width: 150px;
+    height: 40px;
+    background: rgba(0,0,0,0.06);
 }
