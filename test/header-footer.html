@@ -14,6 +14,7 @@
     <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
     <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
     <link rel="stylesheet" href="font.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
 
 
@@ -327,6 +328,32 @@
         </div>
         <div class="col-6">
             <h3 style="font-family: 'Chakra Petch', sans-serif;">PLANETS</h3>
+            <canvas id="myChart" style="width:100%;max-width:450px;height: 230px"></canvas>
+
+            <script>
+                var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
+                var yValues = [72, 84, 65, 96, 88];
+                var barColors = ["red", "green","blue","orange","brown"];
+
+                new Chart("myChart", {
+                    type: "bar",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        title: {
+                            display: true,
+                            text: ""
+                        }
+                    }
+                });
+            </script>
+
 
         </div>
     </div>
