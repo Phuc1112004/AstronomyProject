@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronomy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!--
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/css/docs.theme.min.css">
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+    -->
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
     <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
-    <link rel="stylesheet" href="../home/home.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+
+
 
 </head>
 <body>
 
-
-
-
-
-<nav class="navbar navbar-expand trongsuot "  id="navbarSupportedContent">
-    <div class="container-fluid " >
+<nav class="navbar navbar-expand transparent "  id="navbarSupportedContent">
+    <div class="container-fluid container-transparent" >
 
         <div class="brand collapse navbar-collapse">
 
@@ -24,7 +32,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-transparent">
             <li class="nav-item"><a class="active " aria-current="page"  href="#"> Home</a></li>
             <li class="nav-item">
                 <div class="dropdown">
@@ -56,57 +64,66 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item"><a  href="">Contact</a></li>
+            <li class="nav-item"><a  href="../contact/contact.html">Contact</a></li>
         </ul>
     </div>
 
 </nav>
 
+<script>
+    window.onscroll = function() {
+        var navbar = document.getElementById("navbarSupportedContent");
+        if (window.pageYOffset === 0) {
+            navbar.classList.remove("scrolled");
+        } else {
+            navbar.classList.add("scrolled");
+        }
+    };
+</script>
+
 
 <section class="section1">
-
     <div class=" container">
+
+        <div id="background-video">
+            <video autoplay loop muted>
+                <source src="../media/video/Traidat.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="row">
-            <div class="col-6"><br><br><br><br><br>
+            <div class="col-6 giua">
                 <h1 id="text"></h1>
-                <p style="  font-size: 27px;line-height: 10px;text-align: left;color: #ffffff;letter-spacing: -3px;">
-                    <span class="char" data-char="s">s</span>
-                    <span class="char" data-char="u">u</span>
-                    <span class="char" data-char="r">r</span>
-                    <span class="char" data-char="f">f</span>
-                    <span class="char" data-char="a">a</span>
-                    <span class="char" data-char="c">c</span>
-                    <span class="char" data-char="e">e</span>
-                    <span class="char" data-char=" "> </span>
-                    <span class="char" data-char=" "> </span>
-                    <span class="char" data-char="i">i</span>
-                    <span class="char" data-char="n">n</span>
-                    <span class="char" data-char=" "> </span>
-                    <span class="char" data-char=" "> </span>
-                    <span class="char" data-char="t">t</span>
-                    <span class="char" data-char="h">h</span>
-                    <span class="char" data-char="a">a</span>
-                    <span class="char" data-char="t">t</span>
-                    <span class="char" data-char=" "> </span>
-                    <span class="char" data-char=" "> </span>
-                    <span class="char" data-char="s">s</span>
-                    <span class="char" data-char="u">u</span>
-                    <span class="char" data-char="n">n</span>
-                    <span class="char" data-char=" "> </span>
-                    <span class="char" data-char=" "> </span>
-                    <span class="char" data-char="l">l</span>
-                    <span class="char" data-char="i">i</span>
-                    <span class="char" data-char="g">g</span>
-                    <span class="char" data-char="h">h</span>
-                    <span class="char" data-char="t">t</span>
-                </p><br>
+                <p class="viet">surface in that sunlight</p>
             </div>
+
             <div class="col-6">
                 <div class="dong">
-                    <img id ="myImage" src="../media/astronaut.png" style="height: 400px;width: 400px" alt="...">
+                    <img id ="myImage" src="../media/astronaut.png" style="height: 300px;width: 300px" alt="...">
                 </div></div>
         </div>
     </div>
+    <script>
+
+        const text = "It's a brilliant";
+        const textElement = document.getElementById("text");
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                textElement.innerHTML += text.charAt(index);
+                index++;
+
+                setTimeout(type, 90);
+
+
+            }
+        }
+
+        type();
+
+
+    </script>
+
 </section>
 
 
@@ -129,25 +146,300 @@
             then gradually other objects as experienced.
         </p>
     </div>
+    <div class="container">
+        <div class="row row-cols-2 card-group card1">
+            <div class="col-3">
+                <div class="card p-3 g-5 background" style="width: 14rem;">
+                    <div class="card-body ten">
+                        <span class="card-title"><i class="bi bi-gear icon-color"><hr class="gach"></i></span>
+                        <h3 class="card-text write">SOLAR
+                            SYSTEM</h3>
+                        <p class="font">Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit.</p>
+                    </div>
+                    <div class="card-body right">
+                        <a href="#" class="card-link read-more">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card p-3 g-5 background" style="width: 14rem;">
+                    <div class="card-body ten">
+                        <span class="card-title"><i class="bi bi-globe-central-south-asia icon-color"></i><hr class="gach"></i></span>
+                        <h3 class="card-text write">PLANET
+                            EARTH</h3>
+                        <p class="font">Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit.</p>
+                    </div>
+                    <div class="card-body right">
+                        <a href="#" class="card-link read-more">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card p-3 g-5 background" style="width: 14rem;">
+                    <div class="card-body ten">
+                        <span class="card-title"><i class="bi bi-airplane-engines-fill icon-color"></i><hr class="gach"></i></span>
+                        <h3 class="card-text write">SPACE
+                            PROJECTS</h3>
+                        <p class="font">Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit.</p>
+                    </div>
+                    <div class="card-body right">
+                        <a href="#" class="card-link read-more">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card p-3 g-5 background" style="width: 14rem;">
+                    <div class="card-body ten">
+                        <span class="card-title"><i class="bi bi-lightbulb-fill icon-color"></i><hr class="gach"></i></span>
+                        <h3 class="card-text write">ASTRONOMY
+                            IDEAS</h3>
+                        <p class="font">Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipiscing elit.</p>
+                    </div>
+                    <div class="card-body right">
+                        <a href="#" class="card-link read-more">read more</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <h2 class="h22">
+                    Recent Projects
+                    <hr class="hrr">
+                </h2>
+            </div>
+            <div>
+                <h2>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  Demos -->
+    <!-- The trigger for the Lightbox -->
+
+
+
+
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <a href="#img1" class="lightbox-trigger">Open Image</a>
+
+            <!-- The Lightbox container -->
+            <div class="lightbox-container" id="img1">
+                <img src="../media/img.png" alt="Image">
+                <a href="#" class="lightbox-close">Close</a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="../media/anhhome/xungquangmattroi.jfif">
+        </div>
+        <div class="item">
+            <img src="../media/anhhome/xungquangmattroi.jfif">
+        </div>
+        <div class="item">
+            <img src="../media/img.png">
+        </div>
+    </div><br><br><br><br>
+
+    <script>
+        $(document).ready(function() {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+        });
+
+
+    </script>
+    <script>// Get the trigger and the Lightbox container
+    const trigger = document.querySelector('.lightbox-trigger');
+    const container = document.querySelector('.lightbox-container');
+
+    // Add click event listener to the trigger
+    trigger.addEventListener('click', function(event) {
+        event.preventDefault();
+        container.style.display = 'block';
+    });
+
+    // Add click event listener to the close button
+    const closeButton = document.querySelector('.lightbox-close');
+    closeButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        container.style.display = 'none';
+    });  </script>
+
+
+
 
     <!--        viết code ở đây-->
     <!--        viết code ở đây-->
     <!--        viết code ở đây-->
     <!--        viết code ở đây-->
-
     <!--        viết code ở đây-->
     <!--        viết code ở đây-->
 </main>
+<div class="container">
+    <div class="row">
 
+        <div class="col-6">
+            <h3 style="font-family: 'Chakra Petch', sans-serif;"> SOLAR SYSTEM</h3><br>
+            <div class="tien">
+                <div class="tab-container" style="width: 500px; ">
+                    <div class="tab">
+                        <button style="height: auto;background-color: #1e3352" class="tablinks" onclick="openTab(event, 'tab1')">Planets</button>
+                        <button style="height: auto;background-color: #1e3352" class="tablinks" onclick="openTab(event, 'tab2')">Comets</button>
+                        <button style="height: auto;background-color: #1e3352" class="tablinks" onclick="openTab(event, 'tab3')">Asteroids</button>
+                    </div>
+                    <div id="tab1" class="tabcontent" >
+                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor.</p>
+                    </div>
+                    <div id="tab2" class="tabcontent">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor."</p>
+                    </div>
+                    <div id="tab3" class="tabcontent">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor.</p>
+                    </div>
+                </div>
+                <script>
+                    function openTab(evt, tabName) {
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                        }
+                        tablinks = document.getElementsByClassName("tablinks");
+                        for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].classList.remove("active");
+                        }
+                        document.getElementById(tabName).style.display = "block";
+                        evt.currentTarget.classList.add("active");
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="col-6">
+            <h3 style="font-family: 'Chakra Petch', sans-serif;">PLANETS</h3>
+            <canvas id="myChart" style="width:100%;max-width:450px;height: 230px"></canvas>
+
+            <script>
+                var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
+                var yValues = [72, 84, 65, 96, 88];
+                var barColors = ["red", "green","blue","orange","brown"];
+
+                new Chart("myChart", {
+                    type: "bar",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        title: {
+                            display: true,
+                            text: ""
+                        }
+                    }
+                });
+            </script>
+
+
+        </div>
+    </div>
+</div>
+<br><br>
 <!--footer cứ cop rồi gắn vào-->
 <footer class="text-center text-lg-start bg-light text-muted card-footer" ><br>
+    <div class="col-12 text-center footer-icon">
+        <div class="container " style="text-align: center">
+            <div class="row text-center ">
+                <div class="col-3"></div>
+                <div>
+                    &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2 "><i class="bi bi-facebook"></i></button>
+                    &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-google"></i></button>
+                    &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-pinterest"></i> </button>
+                    &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-twitter"></i> </button>
+                    &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-whatsapp"></i> </button>
+                    &ensp;  <button type="button"  class=" col-1 footer-icon-nen p-2"><i class="bi bi-linkedin"></i> </button>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center text-md-start mt-5 ">
+        <div class="row mt-3">
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <a class="card-footercol-3" href="../home/home.html"><img src="../media/logo/logo.jpg" alt="..." style="width: 200px;height: 120px;padding-left: 10px"></a>
+                <p><i class="bi bi-globe-asia-australia" style="color: white;font-size: 20px"></i>&ensp;101 West Street, New York, NY 12345</p>
 
-    <div class="text-center p-4" >
+                <p><i class="bi bi-telephone-inbound" style="color: white"></i>&ensp; +84 999 999 999 </p>
+                <p><i class="bi bi-envelope-open" style="color: white"></i>&ensp; abcd123@gmail.com</p>
+                <p><i class="bi bi-facebook"></i>&ensp;
+                    <i class="bi bi-twitter"></i>&ensp;
+                    <i class="bi bi-youtube"></i>&ensp;
+                    <i class="bi bi-instagram"></i>&ensp;
+                    <i class="bi bi-tiktok"></i>&ensp;
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4 table-hover">
+                <h4 class="text-uppercase fw-bold mb-4" style="color: whitesmoke">
+                    RECENT POSTS
+                </h4>
+                <h5 style="color: #babbbc">How many galaxies are in the known universe?</h5><br>
+                <p> Cloudy weather on titan is made of methane<br>
+                    Fusce vel mauris vel nulla pellentesque egestas. In vestibulum risus nec nisi...
+                    <br><br>August 6, 2014</p>
+            </div>
+
+            <div class="card col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
+                <div class="card-body" >
+                    <h5 class="card-title">Subscribe newsletter</h5>
+                    <p class="card-text" style="color: #4f5050">Enter your email to receive our latest update and offer !</p>
+                    <form class="mb-3" name="form" action="#" method="get">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]8,$">
+                        <br>
+                        <button style="background-color: #1e2125;width: 150px;height: 40px" ><h6 style="padding-top: 8px;color: white">SUBCRIBE NOW</h6></button>
+                    </form><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-4" style="background: rgba(0,0,0,0.3);">
         © 2023 Copyright:
         <a class="text-reset fw-bold" href="#">PhucTrinh.com</a>
     </div>
 </footer>
-<script src="../test/test.js"></script>
+
+
+
 
 </body>
 </html>

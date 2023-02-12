@@ -241,26 +241,6 @@ a{
     color: rgba(0, 0, 0, 0.8);
 }
 
-footer{
-    background-image: url("../media/logo/nen.jpg");
-    font-family: Quantico;
-}
-footer p {
-    color: #babbbc;
-}
-.footer-icon{
-    background-color: #233144;
-    padding: 30px 30px;
-}
-.footer-icon-nen{
-    color: white;
-    border-color: #6c757d;
-    background: rgba(0,0,0,0.1);
-}
-.footer-icon-nen:hover{
-    background-color: white;
-    color: black;
-}
 header{
     background-image: url("../media/img123.png");
     position: relative;
@@ -312,4 +292,24 @@ header{
     color: #FFFFFF;
     border-color: #233144;
 }
-.social-icon
+
+footer{
+    background-image: url("../media/logo/nen.jpg");
+    font-family: Quantico;
+}
+footer p {
+    color: #babbbc;
+}
+.footer-icon{
+    background-color: #233144;
+    padding: 30px 30px;
+}
+.footer-icon-nen{
+    color: white;
+    border-color: #6c757d;
+    background: rgba(0,0,0,0.1);
+}
+.footer-icon-nen:hover{
+    background-color: white;
+    color: black;
+}

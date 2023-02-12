@@ -8,18 +8,23 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: Quantico;
 
 }
-section.section1 {
+section.section1{
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background-image: url(../media/logo/background.jpg);
     opacity: 0.85;
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat ;
+
 }
+.giua{
+    margin-top: 150px;
+
+}
+
 
 #text {
     font-size: 70px;
@@ -27,32 +32,74 @@ section.section1 {
     text-align: left;
     color: #ffffff;
     font-family: 'Chakra Petch', sans-serif;
+    white-space:pre-wrap;
+    z-index: 1;
+}
+#chuchay{
+    font-size: 36px;
+    display: inline-block;
+
 }
 .char {
     display: inline-block;
     opacity: 0;
     animation: type 6s forwards;
 }
+.char.btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.btn {
+    color: white;
+    padding: 10px 20px;
+    border: ridge #819ee7;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #063896;
+    cursor: pointer;
+}
+
 @keyframes type {
     to {
         opacity: 1;
     }
 }
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+
 
 .dong{
-    transform: translate(1200%,450%);
-    width: 5px;
-    height: 0;
-    background-image: url("../media/astronaut.png");
+    transform: translate(40%,30%);
+    width: 300px;
+    height: 3px;
     position: relative;
     animation-name: example;
     animation-duration: 4s;
     animation-timing-function: linear;
     animation-delay: 2s;
     animation-iteration-count: infinite;
-    margin-top: 200px;
-
-
+    margin-top:160px;
 }
 @keyframes example{
     0%   {background-image:url("../media/astronaut.png");right:0; top:0;}
@@ -63,7 +110,7 @@ section.section1 {
 }
 
 
-nav.trongsuot{
+nav.transparent{
     position: fixed;
     top: 0;
     left: 0;
@@ -80,6 +127,13 @@ nav.trongsuot{
     z-index: 999;
     font-family: Quantico;
 
+}
+.container-transparent{
+    height: 100%;
+}
+.navbar-transparent{
+    height: 100%;
+    align-items: center;
 }
 .marqueee{
     text-shadow: 0 1px 2px;
@@ -107,14 +161,17 @@ nav ul li{
 nav ul li a{
     position: relative;
     display: block;
-    height: 80px;
+    height: 100%;
     line-height: 80px;
     padding: 0 20px;
     box-sizing: border-box;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    transition: 0.5s
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
 }
 
 nav ul li a:before{
@@ -145,13 +202,35 @@ nav ul li a:hover{
     font-weight: 700;
     font-style: normal;
     color: #f9fcfd;
-    font-size: 32px;
-    text-shadow: 0 1px 2px;
+    /*font-size: 32px;*/
     text-transform: uppercase;
+    text-shadow: 2px 2px 5px #ffffff;
+    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
+    -webkit-background-clip: text;
 }
+/*h1 {*/
+/*    background-image: linear-gradient(to right, yellow, yellow);*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*    background-repeat: no-repeat;*/
+/*    animation: shine 4s ease-in-out infinite;*/
+/*}*/
+
+/*@keyframes shine {*/
+/*    from {*/
+/*        background-position: 0 100px;*/
+/*    }*/
+/*    to {*/
+/*        background-position: 0 -100px;*/
+/*    }*/
+/*}*/
+
 .stylish-hr {
     border: 0;
     height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 111, 254), rgba(0, 0, 0, 0));
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));
     margin-bottom: 65px;
     text-decoration-line:overline;
@@ -178,7 +257,7 @@ nav ul li a:hover{
     background-color: #142237;
     background-image: url("../media/logo/nen.jpg");
 }
-.Introduction-to-astronomy.Introduction{
+#Introduction {
     font-family: "Open Sans";
     line-height: 24px;
     font-weight: 400;
@@ -190,13 +269,10 @@ nav ul li a:hover{
     background-attachment: scroll;
     background-position: center top;
     background-size: inherit;
-
-}
-#Introduction {
+    visibility: visible;
     white-space:pre-wrap;
 
 }
-
 /*dropdown*/
 .dropbtn {
     padding: 0;
@@ -205,11 +281,20 @@ nav ul li a:hover{
     font-size: 16px;
     border: none;
     cursor: pointer;
-}
 
+}
+.dropbtn a{
+    display: flex;
+    align-items: center;
+}
+button:hover{
+    height: 80px;
+    background: #f0f0f0;
+}
 .dropdown {
     position: relative;
     display: inline-block;
+    height: 100%;
 }
 
 .dropdown-content {
@@ -218,7 +303,7 @@ nav ul li a:hover{
     background: rgba(0,0,0,0.6);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+
 }
 
 .dropdown-content a {
@@ -235,11 +320,180 @@ nav ul li a:hover{
 .dropbtn:hover{
     color: black;
 }
-
-a{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.8);
+.gach {
+    width: 20%;
+    height: 2px;
+    background-color: gray;
+    border: none;
 }
+.ten{
+    display: block;
+}
+.right{
+    text-align: right;
+}
+.background{
+    background: rgba(0, 0, 0, 0);
+}
+.write{
+    font-size: 24px;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    color: #f9fcfd;
+}
+.font{
+    font-family: "Open Sans";
+    text-align: left;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9eb4cc;
+    font-size: 14px;
+}
+.icon-color{
+    color: #14a5d3;
+}
+.read-more{
+    font-size: 11px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 700;
+    line-height: 20px;
+    color: #5c6777;
+    font-family: 'Open Sans',sans-serif;
+}
+.right a{
+    text-decoration:none;
+
+}
+.card1{
+    margin-top: 50px;
+    margin-bottom: 120px;
+    margin-left: 60px;
+}
+
+.viet {
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 28px;
+    color: rgb(249, 252, 253);
+}
+
+.viet {
+    animation: animated-text 3s steps(30,end) 2s 1 normal both;
+}
+
+
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+}
+.h22{
+    font-family: Quantico;
+    line-height: 32px;
+    font-weight: 700;
+    font-style: normal;
+    color: #f9fcfd;
+    font-size: 30px;
+    font-display: swap;
+    padding: 0;
+    margin: 0 0 1em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    text-align: left;
+    line-height: 1.2em;
+}
+
+.hrr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 111, 254), rgba(0, 0, 0, 0));
+    margin-bottom: 65px;
+    text-decoration-line:overline;
+    text-align: left;
+    width: 40%;
+
+}
+
+#demos .owl-carousel{
+    margin:2rem 0;
+}
+#demos .owl-carousel .item{
+    height:10rem;
+    background:#4DC7A0;
+    padding:1rem;
+}
+#demos .owl-carousel .item h4{
+    color:#FFF;
+    font-weight:400;
+    margin-top:0rem;
+}
+#demos .owl-carousel .item-video{
+    height:300px;
+}
+/* Hide the Lightbox by default */
+.lightbox-container {
+    display: none;
+}
+
+/* Style the Lightbox */
+.lightbox-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.tabcontent {
+    display: none;
+    background-color: #1e3352;
+}
+.tabcontent:first-child {
+    display: block;
+}
+.tablinks {
+    background-color: #16263d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.tien{
+    border-style: solid;
+    border-width: 1px 1px ;
+    border-color: rgba(17,2,122,0.38);
+    width: 503px;
+    height: 160px;
+}
+
+/*footer*/
 
 footer{
     background-image: url("../media/logo/nen.jpg");
