@@ -468,23 +468,26 @@ button:hover{
     cursor: pointer;
 }
 
-input[name=tabs]{
-    display:none;
-}
-input[name=tabs] + label{
-    padding:5px;
-    background: #024873;
-    border-radius:5px;
-    color:white;
 
+.tabcontent {
+    display: none;
+    background-color: #1e3352;
 }
-input[name=tabs]:checked + label{
-    font-weight:bold;
-    border:solid 1px #724e96;
+.tabcontent:first-child {
+    display: block;
 }
-.tab-content{
-    display:none;
+.tablinks {
+    background-color: #16263d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
 }
-#tab1:checked ~ #tab-content1, #tab2:checked ~ #tab-content2,  #tab3:checked ~ #tab-content3 {
-    display:block;
+.tien{
+    border-style: solid;
+    border-width: 1px 1px ;
+    border-color: rgba(17,2,122,0.38);
+    width: 503px;
+    height: 160px;
 }

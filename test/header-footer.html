@@ -14,6 +14,7 @@
     <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
     <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
     <link rel="stylesheet" href="font.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
 
 
@@ -305,28 +306,69 @@
     <div class="row">
 
         <div class="col-6">
-            <h3 style="font-family: 'Chakra Petch', sans-serif;"> SOLAR SYSTEM</h3>
-            <div class="tien" style="border: 3px solid #213046;">
-            <input type="radio" name="tabs" id="tab1" checked="checked">
-            <label for="tab1">Planets</label>
-            <input type="radio" name="tabs" id="tab2">
-            <label for="tab2">Comets </label>
-            <input type="radio" name="tabs" id="tab3">
-            <label for="tab3">Asteroids</label><hr >
-
-            <div id="tab-content1" class="tab-content" >
-                <p >"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor."</p>
-            </div>
-            <div id="tab-content2" class="tab-content" >
-                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor.</p>
-            </div>
-            <div id="tab-content3" class="tab-content">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor."</p>
-            </div>
+            <h3 style="font-family: 'Chakra Petch', sans-serif;"> SOLAR SYSTEM</h3><br>
+            <div class="tien">
+                <div class="tab-container" style="width: 500px; ">
+                    <div class="tab">
+                        <button style="height: auto;background-color: #1e3352" class="tablinks" onclick="openTab(event, 'tab1')">Planets</button>
+                        <button style="height: auto;background-color: #1e3352" class="tablinks" onclick="openTab(event, 'tab2')">Comets</button>
+                        <button style="height: auto;background-color: #1e3352" class="tablinks" onclick="openTab(event, 'tab3')">Asteroids</button>
+                    </div>
+                    <div id="tab1" class="tabcontent" >
+                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor.</p>
+                    </div>
+                    <div id="tab2" class="tabcontent">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor."</p>
+                    </div>
+                    <div id="tab3" class="tabcontent">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor.</p>
+                    </div>
+                </div>
+                <script>
+                    function openTab(evt, tabName) {
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                        }
+                        tablinks = document.getElementsByClassName("tablinks");
+                        for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].classList.remove("active");
+                        }
+                        document.getElementById(tabName).style.display = "block";
+                        evt.currentTarget.classList.add("active");
+                    }
+                </script>
         </div>
         </div>
         <div class="col-6">
             <h3 style="font-family: 'Chakra Petch', sans-serif;">PLANETS</h3>
+            <canvas id="myChart" style="width:100%;max-width:450px;height: 230px"></canvas>
+
+            <script>
+                var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
+                var yValues = [72, 84, 65, 96, 88];
+                var barColors = ["red", "green","blue","orange","brown"];
+
+                new Chart("myChart", {
+                    type: "bar",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        title: {
+                            display: true,
+                            text: ""
+                        }
+                    }
+                });
+            </script>
+
 
         </div>
     </div>
