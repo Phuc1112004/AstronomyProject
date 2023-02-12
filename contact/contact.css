@@ -12,6 +12,12 @@ header{
 }
 .section2 p{
     font-size: small;
+    font-family: 'Open Sans', sans-serif;
+}
+.background-section{
+    background-image: url("../media/hero-map.png");
+    width: 100%;
+    ruby-align: center;
 }
 .section2 i{
     font-size: 30px;
@@ -33,3 +39,14 @@ header{
     height: 40px;
     background: rgba(0,0,0,0.06);
 }
+.social{
+    display: flex;
+}
+.social-icon{
+    background-color: #233144;
+    padding: 20px;
+    font-size: xx-large;
+    color: #FFFFFF;
+    border-color: #233144;
+}
+.social-icon
