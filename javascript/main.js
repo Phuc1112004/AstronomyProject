@@ -45,20 +45,30 @@ $('.owl-carousel').owlCarousel({
 });
 
 
-$("a").click(function(event) {
-    event.preventDefault();
-    var href = $(this).attr("href");
-    var src = $(this).children("img").attr("src");
-    var alt = $(this).children("img").attr("alt");
-    $('#lightbox-img').attr("src", src);
-    $('#lightbox-caption').text(alt);
-    $("#lightbox").fadeIn();
+$(document).ready(function() {
+    $(".owl-carousel").owlCarousel();
+
+    $("a").click(function(event) {
+        event.preventDefault();
+        var href = $(this).attr("href");
+        var src = $(this).children("img").attr("src");
+        var alt = $(this).children("img").attr("alt");
+        $("#lightbox-img").attr("src", src);
+        $("#lightbox-caption").text(alt);
+        $("#lightbox").fadeIn();
+    });
+
+    $("#lightbox-close").click(function(event) {
+        event.preventDefault();
+        $("#lightbox").fadeOut();
+    });
 });
 
-$("#lightbox-close").click(function(event) {
-    event.preventDefault();
-    $("#lightbox").fadeOut();
-});
+
+
+
+
+
 
 
 
@@ -82,7 +92,7 @@ var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
 var yValues = [72, 84, 65, 96, 88];
 var barColors = ["#14a5d3", "#20baa0","#2e91d2","#f5b343","#ed5b66"];
 
-new Chart("myChart", {
+new Chart(".myChart", {
     type: "horizontalBar",
     data: {
         labels: xValues,
