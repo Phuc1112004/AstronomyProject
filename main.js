@@ -25,3 +25,5 @@ function type() {
 }
 
 type();
+
+// search
