@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronomy</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <!--
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/css/docs.theme.min.css">
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
-    -->
-    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+          href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
     <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
     <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
     <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
     <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link>
+    .gallery-list .gallery-thumb .thumbnail-caption-inner .fa:before
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
 
 
@@ -21,18 +22,19 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand transparent "  id="navbarSupportedContent">
-    <div class="container-fluid container-transparent" >
+<nav class="navbar navbar-expand transparent " id="navbarSupportedContent">
+    <div class="container-fluid container-transparent">
 
         <div class="brand collapse navbar-collapse">
 
             <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px"></h2>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-transparent">
-            <li class="nav-item"><a class="active " aria-current="page"  href="#"> Home</a></li>
+            <li class="nav-item"><a class="active " aria-current="page" href="#"> Home</a></li>
             <li class="nav-item">
                 <div class="dropdown">
                     <button class="dropbtn"><a>PAGES</a></button>
@@ -63,21 +65,14 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item"><a  href="../contact/contact.html">Contact</a></li>
+            <li class="nav-item"><a href="../contact/contact.html">Contact</a></li>
         </ul>
     </div>
 
 </nav>
 
 <script>
-    window.onscroll = function() {
-        var navbar = document.getElementById("navbarSupportedContent");
-        if (window.pageYOffset === 0) {
-            navbar.classList.remove("scrolled");
-        } else {
-            navbar.classList.add("scrolled");
-        }
-    };
+
 </script>
 
 
@@ -97,26 +92,13 @@
 
             <div class="col-6">
                 <div class="dong">
-                    <img id ="myImage" src="../media/astronaut.png" style="height: 370px;width: 370px" alt="...">
-                </div></div>
+                    <img id="myImage" src="../media/astronaut.png" style="height: 370px;width: 370px" alt="...">
+                </div>
+            </div>
         </div>
     </div>
     <script>
 
-        const text = "It's a brilliant";
-        const textElement = document.getElementById("text");
-        let index = 0;
-
-        function type() {
-            if (index < text.length) {
-                textElement.innerHTML += text.charAt(index);
-                index++;
-
-                setTimeout(type, 90);
-
-
-            }
-        }
 
         type();
 
@@ -165,7 +147,9 @@
             <div class="col-3">
                 <div class="card p-3 g-5 background" style="width: 14rem;">
                     <div class="card-body ten">
-                        <span class="card-title"><i class="bi bi-globe-central-south-asia icon-color"></i><hr class="gach"></i></span>
+                        <span class="card-title"><i class="bi bi-globe-central-south-asia icon-color"></i><hr
+                                class="gach">
+                            </i></span>
                         <h3 class="card-text write">PLANET
                             EARTH</h3>
                         <p class="font">Lorem ipsum dolor sit
@@ -180,7 +164,8 @@
             <div class="col-3">
                 <div class="card p-3 g-5 background" style="width: 14rem;">
                     <div class="card-body ten">
-                        <span class="card-title"><i class="bi bi-airplane-engines-fill icon-color"></i><hr class="gach"></i></span>
+                        <span class="card-title"><i class="bi bi-airplane-engines-fill icon-color"></i><hr class="gach">
+                            </i></span>
                         <h3 class="card-text write">SPACE
                             PROJECTS</h3>
                         <p class="font">Lorem ipsum dolor sit
@@ -195,7 +180,8 @@
             <div class="col-3">
                 <div class="card p-3 g-5 background" style="width: 14rem;">
                     <div class="card-body ten">
-                        <span class="card-title"><i class="bi bi-lightbulb-fill icon-color"></i><hr class="gach"></i></span>
+                        <span class="card-title"><i class="bi bi-lightbulb-fill icon-color"></i><hr class="gach">
+                            </i></span>
                         <h3 class="card-text write">ASTRONOMY
                             IDEAS</h3>
                         <p class="font">Lorem ipsum dolor sit
@@ -227,27 +213,173 @@
     <!--  Demos -->
     <!-- The trigger for the Lightbox -->
     <div class="owl-carousel">
+
+        <div class="gallery-list">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_1.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+
+                <a href="#">
+                    <img src="../media/anh/img_1.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="gallery-list">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_2.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+                <a href="#">
+                    <img src="../media/anh/img_2.png">
+                </a>
+
+            </div>
+        </div>
+
+
+        <div class="gallery-list">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_3.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+                <a href="#" >
+                    <img src="../media/anh/img_3.png">
+                </a>
+
+            </div>
+        </div>
+
+        <div class="gallery-list">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_4.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+                <a href="#" >
+                    <img src="../media/anh/img_4.png">
+                </a>
+
+            </div>
+        </div>
+
+        <div class="gallery-list">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_5.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+                <a href="#" >
+                    <img src="../media/anh/img_5.png">
+                </a>
+
+            </div>
+        </div>
+
+        <div class="gallery-list">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_6.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+                <a href="#" >
+                    <img src="../media/anh/img_6.png">
+                </a>
+
+            </div>
+        </div>
+
+        <div class="gallery-list p-5">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_7.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+                <a href="#" >
+                    <img src="../media/anh/img_7.png">
+                </a>
+
+            </div>
+        </div>
+
+        <div class="gallery-list">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_8.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+                <a href="#" >
+                    <img src="../media/anh/img_8.png">
+                </a>
+
+            </div>
         <div class="item image-container">
             <a href="#">
-                <img src="../media/img123.png">
+                <img src="../media/anh/img.png">
             </a>
             <div class="image-text"><h1></h1></div>
         </div>
         <div class="item image-container">
             <a href="#">
-                <img src="../media/img123.png">
+                <img src="../media/anh/img_1.png">
             </a>
             <div class="image-text"><h1>Project</h1></div>
+
+        <div class="gallery-list">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_9.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+                <a href="#" >
+                    <img src="../media/anh/img_9.png">
+                </a>
+
+            </div>
         </div>
         <div class="item image-container">
             <a href="#" >
-                <img src="../media/hero-map.png">
+                <img src="../media/anh/img_2.png">
             </a>
             <div class="image-text"><h1>Project</h1></div>
+
+        <div class="gallery-list">
+            <div class="item image-container gallery-thumb">
+                <div class="gallery-thumb">
+                <span class="thumbnail-caption-inner">
+                <a href="../media/anh/img_10.png" class="fa fa-search fa-2x magnific-img"></a>
+                <a href="" class="fa fa-external-link fa-2x"></a>
+            </span>
+                </div>
+                <a href="#" >
+                    <img src="../media/anh/img_10.png">
+                </a>
+
+            </div>
         </div>
     </div>
-
-
 
 
     <div id="lightbox" style="display: none;">
@@ -257,131 +389,69 @@
         </div>
         <a href="#" id="lightbox-close">&times;</a>
     </div>
-
-
-                <script>
-                    $('.owl-carousel').owlCarousel({
-                        rtl:true,
-                        loop:true,
-                        margin:10,
-                        nav:true,
-                        responsive:{
-                            0:{
-                                items:1
-                            },
-                            600:{
-                                items:3
-                            },
-                            1000:{
-                                items:5
-                            }
-                        }
-                    });
-
-
-                        $("a").click(function(event) {
-                            event.preventDefault();
-                            var href = $(this).attr("href");
-                            var src = $(this).children("img").attr("src");
-                            var alt = $(this).children("img").attr("alt");
-                            $('#lightbox-img').attr("src", src);
-                            $('#lightbox-caption').text(alt);
-                            $("#lightbox").fadeIn();
-                        });
-
-                        $("#lightbox-close").click(function(event) {
-                            event.preventDefault();
-                            $("#lightbox").fadeOut();
-                        });
-
-
-
-                </script>
-
-
-
-
-
-
-
-
-                <!--        viết code ở đây-->
-    <!--        viết code ở đây-->
-    <!--        viết code ở đây-->
-    <!--        viết code ở đây-->
-    <!--        viết code ở đây-->
-    <!--        viết code ở đây-->
-</main>
-
-        <div class="col-6">
-            <h3 style="font-family: 'Chakra Petch', sans-serif;"> SOLAR SYSTEM</h3><br>
-            <div class="tien">
-                <div class="tab-container" style="width: 500px; ">
-                    <div class="tab">
-                        <button style="height: auto;background-color: #1e3352" class="tablinks" onclick="openTab(event, 'tab1')">Planets</button>
-                        <button style="height: auto;background-color: #1e3352" class="tablinks" onclick="openTab(event, 'tab2')">Comets</button>
-                        <button style="height: auto;background-color: #1e3352" class="tablinks" onclick="openTab(event, 'tab3')">Asteroids</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3 style="font-family: 'Chakra Petch', sans-serif;"> SOLAR SYSTEM</h3><br>
+                <div class="tien">
+                    <div class="tab-container" style="width: 500px; ">
+                        <div class="tab">
+                            <button style="height: auto;background-color: #1e3352" class="tablinks"
+                                    onclick="openTab(event, 'tab1')">Planets
+                            </button>
+                            <button style="height: auto;background-color: #1e3352" class="tablinks"
+                                    onclick="openTab(event, 'tab2')">Comets
+                            </button>
+                            <button style="height: auto;background-color: #1e3352" class="tablinks"
+                                    onclick="openTab(event, 'tab3')">Asteroids
+                            </button>
+                        </div>
+                        <div id="tab1" class="tabcontent">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat.
+                                Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit
+                                arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque
+                                viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in
+                                commodo. Nam consectetur eget nisi eget auctor.</p>
+                        </div>
+                        <div id="tab2" class="tabcontent">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat.
+                                Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit
+                                arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque
+                                viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in
+                                commodo. Nam consectetur eget nisi eget auctor."</p>
+                        </div>
+                        <div id="tab3" class="tabcontent">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat.
+                                Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit
+                                arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque
+                                viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in
+                                commodo. Nam consectetur eget nisi eget auctor.</p>
+                        </div>
                     </div>
-                    <div id="tab1" class="tabcontent" >
-                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor.</p>
-                    </div>
-                    <div id="tab2" class="tabcontent">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor."</p>
-                    </div>
-                    <div id="tab3" class="tabcontent">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ullamcorper erat. Aenean nec eros fermentum, facilisis nibh laoreet, pharetra turpis. Curabitur id velit arcu. Ut arcu tortor, semper vitae porttitor eget, convallis et diam. Pellentesque viverra sem mauris, sed ultricies erat rhoncus quis.Donec porta varius mauris in commodo. Nam consectetur eget nisi eget auctor.</p>
-                    </div>
+
                 </div>
-                <script>
-                    function openTab(evt, tabName) {
-                        var i, tabcontent, tablinks;
-                        tabcontent = document.getElementsByClassName("tabcontent");
-                        for (i = 0; i < tabcontent.length; i++) {
-                            tabcontent[i].style.display = "none";
-                        }
-                        tablinks = document.getElementsByClassName("tablinks");
-                        for (i = 0; i < tablinks.length; i++) {
-                            tablinks[i].classList.remove("active");
-                        }
-                        document.getElementById(tabName).style.display = "block";
-                        evt.currentTarget.classList.add("active");
-                    }
-                </script>
-        </div>
-        </div>
-        <div class="col-6">
-            <h3 style="font-family: 'Chakra Petch', sans-serif;">PLANETS</h3>
-            <canvas id="myChart" style="width:100%;max-width:450px;height: 230px"></canvas>
-
-            <script>
-                var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
-                var yValues = [72, 84, 65, 96, 88];
-                var barColors = ["red", "green","blue","orange","brown"];
-
-                new Chart("myChart", {
-                    type: "bar",
-                    data: {
-                        labels: xValues,
-                        datasets: [{
-                            backgroundColor: barColors,
-                            data: yValues
-                        }]
-                    },
-                    options: {
-                        legend: {display: false},
-                        title: {
-                            display: true,
-                            text: ""
-                        }
-                    }
-                });
-            </script>
+            </div>
+            <div class="col-6">
+                <h3 style="font-family: 'Chakra Petch', sans-serif;">PLANETS</h3>
+                <canvas id="myChart" style="width:100%;max-width:450px;height: 230px"></canvas>
 
 
+            </div>
         </div>
     </div>
-</div>
-<br><br>
+
+
+    x
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+    <!--        viết code ở đây-->
+    <script src="test.js"></script>
+</main>
+
+
 <!--footer cứ cop rồi gắn vào-->
 <footer class="text-center text-lg-start bg-light text-muted" ><br>
 
