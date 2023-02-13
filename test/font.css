@@ -490,9 +490,9 @@ button:hover{
 /**/
 
 
- .image-container {
-     position: relative;
- }
+.image-container {
+    position: relative;
+}
 
 .image-text {
     position: absolute;
@@ -676,8 +676,8 @@ button:hover{
     opacity:1
 }
 .gallery-list .gallery-thumb:hover .thumbnail-caption-inner .fa-search{
-     -webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-transition-delay:.05s;transition-delay:.05s
- }
+    -webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-transition-delay:.05s;transition-delay:.05s
+}
 .gallery-list .gallery-thumb:hover .thumbnail-caption-inner .fa-external-link{
     -webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-transition-delay:.1s;transition-delay:.1s
 }

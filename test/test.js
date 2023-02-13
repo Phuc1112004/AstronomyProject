@@ -1,4 +1,3 @@
-
 window.onscroll = function() {
     var navbar = document.getElementById("navbarSupportedContent");
     if (window.pageYOffset === 0) {
@@ -62,27 +61,10 @@ $("#lightbox-close").click(function(event) {
 
 var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
 var yValues = [72, 84, 65, 96, 88];
-var barColors = ["red", "green","blue","orange","brown"];
-
-
-
-
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.classList.add("active");
-}
+var barColors = ["#14a5d3", "#20baa0","#2e91d2","#f5b343","#ed5b66"];
 
 new Chart("myChart", {
-    type: "bar",
+    type: "horizontalBar",
     data: {
         labels: xValues,
         datasets: [{
@@ -95,10 +77,9 @@ new Chart("myChart", {
         title: {
             display: true,
             text: ""
+        },
+        scales: {
+            xAxes: [{ticks: {min: 50, max:100}}]
         }
     }
 });
-
-
-
-

@@ -60,9 +60,6 @@ $("#lightbox-close").click(function(event) {
     $("#lightbox").fadeOut();
 });
 
-var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
-var yValues = [72, 84, 65, 96, 88];
-var barColors = ["red", "green","blue","orange","brown"];
 
 
 
@@ -81,8 +78,12 @@ function openTab(evt, tabName) {
     evt.currentTarget.classList.add("active");
 }
 
+var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
+var yValues = [72, 84, 65, 96, 88];
+var barColors = ["#14a5d3", "#20baa0","#2e91d2","#f5b343","#ed5b66"];
+
 new Chart("myChart", {
-    type: "bar",
+    type: "horizontalBar",
     data: {
         labels: xValues,
         datasets: [{
@@ -95,9 +96,13 @@ new Chart("myChart", {
         title: {
             display: true,
             text: ""
+        },
+        scales: {
+            xAxes: [{ticks: {min: 50, max:100}}]
         }
     }
 });
+
 
 
 
