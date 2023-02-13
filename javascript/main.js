@@ -63,6 +63,30 @@ $(document).ready(function() {
         $("#lightbox").fadeOut();
     });
 });
+var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
+var yValues = [72, 84, 65, 96, 88];
+var barColors = ["#14a5d3", "#20baa0","#2e91d2","#f5b343","#ed5b66"];
+
+new Chart("myChart", {
+    type: "horizontalBar",
+    data: {
+        labels: xValues,
+        datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {
+            display: true,
+            text: ""
+        },
+        scales: {
+            xAxes: [{ticks: {min: 50, max:100}}]
+        }
+    }
+});
 
 
 
