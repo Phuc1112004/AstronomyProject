@@ -128,13 +128,6 @@ nav.transparent{
     font-family: Quantico;
 
 }
-.container-transparent{
-    height: 100%;
-}
-.navbar-transparent{
-    height: 100%;
-    align-items: center;
-}
 .marqueee{
     text-shadow: 0 1px 2px;
 }
@@ -161,17 +154,14 @@ nav ul li{
 nav ul li a{
     position: relative;
     display: block;
-    height: 100%;
+    height: 80px;
     line-height: 80px;
     padding: 0 20px;
     box-sizing: border-box;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    transition: 0.5s;
-    font-weight: 400;
-    font-size: 14px;
-    font-style: normal;
+    transition: 0.5s
 }
 
 nav ul li a:before{
@@ -202,35 +192,13 @@ nav ul li a:hover{
     font-weight: 700;
     font-style: normal;
     color: #f9fcfd;
-    /*font-size: 32px;*/
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px #ffffff;
-    -webkit-text-stroke: 1px #ffffff;
-    -webkit-text-fill-color: transparent;
     font-size: 32px;
-    -webkit-background-clip: text;
+    text-shadow: 0 1px 2px;
+    text-transform: uppercase;
 }
-/*h1 {*/
-/*    background-image: linear-gradient(to right, yellow, yellow);*/
-/*    -webkit-background-clip: text;*/
-/*    -webkit-text-fill-color: transparent;*/
-/*    background-repeat: no-repeat;*/
-/*    animation: shine 4s ease-in-out infinite;*/
-/*}*/
-
-/*@keyframes shine {*/
-/*    from {*/
-/*        background-position: 0 100px;*/
-/*    }*/
-/*    to {*/
-/*        background-position: 0 -100px;*/
-/*    }*/
-/*}*/
-
 .stylish-hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 111, 254), rgba(0, 0, 0, 0));
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));
     margin-bottom: 65px;
     text-decoration-line:overline;
@@ -783,4 +751,98 @@ button:hover{
     .owl-carousel .gallery-item{
         margin-bottom:0
     }
+}
+
+
+/*search*/
+.container-search{
+    overflow: hidden;
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    /* position: relative; */
+}
+.container-search input#search{
+    width: 250px;
+    height: 40px;
+    background: #283041;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #fff;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+}
+
+.container-search input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+.container-search input#search:-moz-placeholder { /* Firefox 18- */
+    color: #65737e;
+}
+.container-search input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #65737e;
+}
+.container-search input#search:-ms-input-placeholder {
+    color: #65737e;
+}
+
+.container-search button.icon{
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    background: #FFFFFF;
+    height: 40px;
+    width: 50px;
+    color: #4f5b66;
+    opacity: 0;
+    font-size: 10pt;
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+}
+
+/* ANIMATION EFFECT */
+.container-search:hover button.icon, .container-search:active button.icon, .container-search:focus button.icon{
+    outline:none;
+    opacity: 1;
+    margin-left: -50px;
+    cursor: pointer;
+}
+/*search end*/
+
+/*footer*/
+footer{
+    background-image: url("../media/logo/nen.jpg");
+    font-family: Quantico;
+}
+footer p {
+    color: #babbbc;
+}
+.footer-icon{
+    background-color: #233144;
+    padding: 30px 30px;
+}
+.footer-icon-nen{
+    color: white;
+    border-color: #6c757d;
+    background: rgba(0,0,0,0.1);
+}
+.footer-icon-nen:hover{
+    background-color: white;
+    color: black;
 }
