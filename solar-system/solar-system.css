@@ -1,0 +1,9 @@
+.inset{
+    border-style: inset;
+    width: 900px;
+    height: auto;
+    display: flex;
+}
+main section.container.inset p{
+    mar
+}
