@@ -6,7 +6,9 @@ window.onscroll = function() {
     } else {
         navbar.classList.add("scrolled");
     }
+
 };
+
 
 
 const text = "It's a brilliant";
@@ -22,9 +24,8 @@ function type() {
 
 
     }
-}
+}  type();
 
-type();
 
 $('.owl-carousel').owlCarousel({
     rtl:true,
@@ -36,10 +37,10 @@ $('.owl-carousel').owlCarousel({
             items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
-            items:5
+            items:3
         }
     }
 });
@@ -48,7 +49,7 @@ $('.owl-carousel').owlCarousel({
 $(document).ready(function() {
     $(".owl-carousel").owlCarousel();
 
-    $("a").click(function(event) {
+    $(".gallery-list a").click(function(event) {
         event.preventDefault();
         var href = $(this).attr("href");
         var src = $(this).children("img").attr("src");
@@ -62,33 +63,8 @@ $(document).ready(function() {
         event.preventDefault();
         $("#lightbox").fadeOut();
     });
+
 });
-var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
-var yValues = [72, 84, 65, 96, 88];
-var barColors = ["#14a5d3", "#20baa0","#2e91d2","#f5b343","#ed5b66"];
-
-new Chart("myChart", {
-    type: "horizontalBar",
-    data: {
-        labels: xValues,
-        datasets: [{
-            backgroundColor: barColors,
-            data: yValues
-        }]
-    },
-    options: {
-        legend: {display: false},
-        title: {
-            display: true,
-            text: ""
-        },
-        scales: {
-            xAxes: [{ticks: {min: 50, max:100}}]
-        }
-    }
-});
-
-
 
 
 
@@ -111,6 +87,14 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.classList.add("active");
 }
+
+$(document).on('click', '#scroll-to-element', function(event) {
+    event.preventDefault();
+    var target = $(this).attr('data-scroll');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 1000, 'easeInOutExpo');
+});
 
 var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
 var yValues = [72, 84, 65, 96, 88];
