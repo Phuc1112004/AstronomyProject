@@ -65,3 +65,7 @@ section nav ul li{
 .ccc button{
     height: auto;
 }
+.p-1 img{
+    width: 90px;
+    height: 90px;
+}
