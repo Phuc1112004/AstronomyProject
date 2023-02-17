@@ -13,7 +13,7 @@ section h3{
 }
 section p{
     margin: 10px 100px ;
-    color: #FFFFFF;
+
 }
 
 .section img{
@@ -61,4 +61,8 @@ section nav ul li{
 /*thanh phân trang*/
 .pagination ul{
     background-color: #1e3352;
+}
+.p-1 img{
+    width: 90px;
+    height: 90px;
 }
