@@ -44,4 +44,10 @@ body{
     height: 570px;
 }
 
+.file-text h1{
+    font-family: Quantico;
+    font-weight: 700;
+    font-style: normal;
+    color: #f9fcfd;
+}
 
