@@ -96,7 +96,7 @@ var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
 var yValues = [72, 84, 65, 96, 88];
 var barColors = ["#14a5d3", "#20baa0","#2e91d2","#f5b343","#ed5b66"];
 
-new Chart(".myChart", {
+new Chart("myChart", {
     type: "horizontalBar",
     data: {
         labels: xValues,
