@@ -1,4 +1,4 @@
-
+//nav-bar
 window.onscroll = function() {
     var navbar = document.getElementById("navbarSupportedContent");
     if (window.pageYOffset === 0) {
@@ -8,9 +8,9 @@ window.onscroll = function() {
     }
 
 };
+//end
 
-
-
+//chuchay
 const text = "It's a brilliant";
 const textElement = document.getElementById("text");
 let index = 0;
@@ -25,8 +25,8 @@ function type() {
 
     }
 }  type();
-
-
+//end
+//Thư viện owl-carousel
 $('.owl-carousel').owlCarousel({
     rtl:true,
     loop:true,
@@ -44,12 +44,13 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+//end
 
-
+//light box
 $(document).ready(function() {
     $(".owl-carousel").owlCarousel();
 
-    $(".gallery-list a").click(function(event) {
+    $(".gallery-list a.zoom").click(function(event) {
         event.preventDefault();
         var href = $(this).attr("href");
         var src = $(this).children("img").attr("src");
@@ -65,15 +66,10 @@ $(document).ready(function() {
     });
 
 });
+//end
 
 
-
-
-
-
-
-
-
+//tab link
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -120,6 +116,86 @@ new Chart(".myChart", {
         }
     }
 });
+
+const element = document.querySelector('#my-element');
+
+function slideInLeft() {
+    const elementPosition = element.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / .1;
+
+    if (elementPosition < screenPosition) {
+        element.classList.add('slideInLeft');
+    }
+}
+
+window.addEventListener('scroll', slideInLeft);
+
+const elementt = document.getElementById("elementt");
+elementt.classList.add("slideInRight");
+
+
+
+
+
+
+
+
+ // Kích hoạt hiệu ứng
+
+
+// setTimeout(function() {
+//     myDiv.classList.remove("slideInDown"); // Hủy hiệu ứng sau 1 giây
+// }, 1000);
+$(document).ready(function() {
+    $('#myDiv').addClass('animated fadeInDown');
+});
+
+
+
+
+//Vòng tròn
+window.onload = function() {
+    var can = document.getElementById('canvas'),
+        spanProcent = document.getElementById('procent'),
+        c = can.getContext('2d');
+
+    var posX = can.width / 2,
+        posY = can.height / 2,
+        fps = 1000 / 200,
+        procent = 0,
+        oneProcent = 360 / 100,
+        result = oneProcent * 64;
+
+    c.lineCap = 'round';
+    arcMove();
+
+    function arcMove(){
+        var deegres = 0;
+        var acrInterval = setInterval (function() {
+            deegres += 1;
+            c.clearRect( 0, 0, can.width, can.height );
+            procent = deegres / oneProcent;
+
+            spanProcent.innerHTML = procent.toFixed();
+
+            c.beginPath();
+            c.arc( posX, posY, 70, (Math.PI/180) * 270, (Math.PI/180) * (270 + 360) );
+            c.strokeStyle = '#b1b1b1';
+            c.lineWidth = '10';
+            c.stroke();
+
+            c.beginPath();
+            c.strokeStyle = '#13aad3';
+            c.lineWidth = '10';
+            c.arc( posX, posY, 70, (Math.PI/180) * 270, (Math.PI/180) * (270 + deegres) );
+            c.stroke();
+            if( deegres >= result ) clearInterval(acrInterval);
+        }, fps);
+
+    }
+
+
+}
 
 
 
