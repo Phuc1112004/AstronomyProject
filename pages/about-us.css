@@ -1,0 +1,24 @@
+.parallax{
+    background-image: url('../media/footer-img1.jpg');
+
+
+    /* Full height */
+    height: 360px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.parallax p{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 0.75em;
+    transform: translate(0px, 130px);
+    font-family: Quantico,sans-serif;
+    line-height: 1.2em;
+    font-weight: 400;
+    color: #f9fcfd;
+}
