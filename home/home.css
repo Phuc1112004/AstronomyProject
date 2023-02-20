@@ -846,6 +846,30 @@ footer p {
     background-color: white;
     color: black;
 }
+.parallax{
+background-image: url('../media/footer-img1.jpg');
+
+
+/* Full height */
+height: 360px;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.parallax p{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 0.75em;
+    transform: translate(0px, 130px);
+    font-family: Quantico,sans-serif;
+    line-height: 1.2em;
+    font-weight: 400;
+    color: #f9fcfd;
+}
 .circle-container {
     position: relative;
 }
@@ -867,20 +891,98 @@ footer p {
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
-.circle-text {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: rotate(90deg);
+.h-0 {
+    height: 0!important;
+}
+:root {
+    background: #fff;
+}
 
+span#procent {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+    color: #13aad3;
+}
+
+span#procent::after {
+    content: '%';
+}
+
+.canvas-wrap {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+.slideInLeft {
+    animation: slideInLeft 3s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.slideInRight {
+    animation-name: slideInRight;
+    animation-duration: 3s;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 0;
+    }
+}
+
+/* .slideInDown {*/
+/*     animation-name: slideInDown;*/
+/*     animation-duration: 2s;*/
+/* }*/
+
+/*@keyframes slideInDown {*/
+/*    from {*/
+/*        transform: translateY(-100%);*/
+/*    }*/
+/*    to {*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*}*/
+.fadeInDown {
+    opacity: 0;
+    animation: fadeInDown 2s ease-in-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+/*fadeUp*/
+#myElement {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-in-out;
 }
 
 
-.circle-text p {
-    transform: rotate(-90deg);
-}
+
+
