@@ -154,9 +154,11 @@ $(document).ready(function() {
 
 
 //Vòng tròn
-window.onload = function() {
-    var can = document.getElementById('canvas'),
-        spanProcent = document.getElementById('procent'),
+
+
+    function arcMove(limit, can, spanProcent){
+        var can = document.getElementById(can),
+            spanProcent = document.getElementById(spanProcent),
         c = can.getContext('2d');
 
     var posX = can.width / 2,
@@ -164,12 +166,10 @@ window.onload = function() {
         fps = 1000 / 200,
         procent = 0,
         oneProcent = 360 / 100,
-        result = oneProcent * 64;
+            result = oneProcent * limit;
 
     c.lineCap = 'round';
-    arcMove();
 
-    function arcMove(){
         var deegres = 0;
         var acrInterval = setInterval (function() {
             deegres += 1;
@@ -194,8 +194,34 @@ window.onload = function() {
 
     }
 
+// Xac dinh khi cuon chuot toi phan tu
+// Get the target element you want to observe
+const target = document.querySelector('#canvas-1');
+const target0 = document.getElementById('intro');
 
+// Create an Intersection Observer instance
+const observer = new IntersectionObserver(entries => {
+    // Loop through the entries array
+    entries.forEach(entry => {
+        // Check if the target element is intersecting with the viewport
+        if (entry.isIntersecting) {
+            // Target element is entering the viewport, do something
+            arcMove(60, 'canvas-1', 'procent-1');
+            arcMove(40, 'canvas-2', 'procent-2');
+            arcMove(20, 'canvas-3', 'procent-3');
+            arcMove(50, 'canvas-4', 'procent-4');
+            target0.classList.add('fadeInDown');
 }
+    });
+});
+
+// Observe the target element
+observer.observe(target);
+observer.observe(target0);
+observer.observe(target1);
+
+
+
 
 
 
