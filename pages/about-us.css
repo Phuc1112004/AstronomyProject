@@ -22,3 +22,11 @@
     font-weight: 400;
     color: #f9fcfd;
 }
+.hrr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 111, 254), rgba(0, 0, 0, 0));
+    margin-bottom: 65px;
+    text-decoration-line:overline;
+
+}
