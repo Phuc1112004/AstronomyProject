@@ -1,0 +1,55 @@
+.parallax{
+    background-image: url('../media/logo/nen1.png');
+
+
+    /* Full height */
+    height: 360px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.parallax p{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 0.75em;
+    transform: translate(0px, 130px);
+    font-family: Quantico,sans-serif;
+    line-height: 1.2em;
+    font-weight: 400;
+    color: #f9fcfd;
+}
+
+.social{
+    display: flex;
+}
+.social-icon{
+    background-color: #233144;
+    padding: 20px;
+    font-size: xx-large;
+    color: #ffffff;
+    border-color: #233144;
+    background: rgba(0,0,0,0.1);
+
+}
+.social-icon:hover{
+    background-color: white;
+    color: black;
+}
+.ccc button{
+    height: auto;
+}
+.hrr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 111, 254), rgba(0, 0, 0, 0));
+    margin-bottom: 65px;
+    text-decoration-line:overline;
+
+}
+.tieude{
+    color: #f0f0f0;
+}

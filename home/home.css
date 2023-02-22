@@ -865,7 +865,7 @@ background-size: cover;
     font-size: 42px;
     margin-bottom: 0.75em;
     transform: translate(0px, 130px);
-    font-family: Quantico,sans-serif;
+    font-family:  'Chakra Petch', sans-serif;
     line-height: 1.2em;
     font-weight: 400;
     color: #f9fcfd;
@@ -898,7 +898,7 @@ background-size: cover;
     background: #fff;
 }
 
-span#procent {
+span#procent-1, span#procent-2, span#procent-3, span#procent-4 {
     display: block;
     position: absolute;
     left: 50%;
@@ -908,7 +908,7 @@ span#procent {
     color: #13aad3;
 }
 
-span#procent::after {
+span#procent-1::after, span#procent-2::after, span#procent-3::after, span#procent-4::after {
     content: '%';
 }
 
@@ -918,7 +918,7 @@ span#procent::after {
     height: 300px;
 }
 .slideInLeft {
-    animation: slideInLeft 3s ease forwards;
+    animation: slideInLeft 1s ease forwards;
 }
 
 @keyframes slideInLeft {
@@ -933,7 +933,7 @@ span#procent::after {
 }
 .slideInRight {
     animation-name: slideInRight;
-    animation-duration: 3s;
+    animation-duration: 1s;
 }
 
 @keyframes slideInRight {
@@ -962,7 +962,7 @@ span#procent::after {
 /*}*/
 .fadeInDown {
     opacity: 0;
-    animation: fadeInDown 2s ease-in-out forwards;
+    animation: fadeInDown 1s ease-in-out forwards;
 }
 
 @keyframes fadeInDown {
@@ -977,10 +977,21 @@ span#procent::after {
     }
 }
 /*fadeUp*/
-#myElement {
+.fade-in-up {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 1s ease-in-out;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
