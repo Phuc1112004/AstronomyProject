@@ -1,5 +1,5 @@
 .parallax{
-    background-image: url('../media/footer-img1.jpg');
+    background-image: url('../media/logo/nen1.png');
 
 
     /* Full height */
@@ -21,4 +21,24 @@
     line-height: 1.2em;
     font-weight: 400;
     color: #f9fcfd;
+}
+
+.social{
+    display: flex;
+}
+.social-icon{
+    background-color: #233144;
+    padding: 20px;
+    font-size: xx-large;
+    color: #ffffff;
+    border-color: #233144;
+    background: rgba(0,0,0,0.1);
+
+}
+.social-icon:hover{
+    background-color: white;
+    color: black;
+}
+.ccc button{
+    height: auto;
 }

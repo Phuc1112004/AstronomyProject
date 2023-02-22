@@ -296,6 +296,10 @@ header{
     color: #FFFFFF;
     border-color: #233144;
 }
+.social-icon:hover{
+    background-color: white;
+    color: black;
+}
 
 /*footer*/
 footer{
