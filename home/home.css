@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Labrada:ital,wght@1,500&family=Noto+Sans+Tagbanwa&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -8,7 +8,8 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: Quantico;
+    /*font-family: 'Labrada', serif;*/
+    font-family: 'Noto Sans Tagbanwa', sans-serif;
 
 }
 section.section1{
@@ -645,7 +646,13 @@ button:hover{
     background:#14a5d3;content:"";display:block;position:absolute;left:0;top:0;right:0;bottom:0;-webkit-transition:.3s;transition:.3s;z-index:1
 }
 .gallery-list .gallery-thumb .thumbnail-caption-inner .fa-search {
-    left:50%;top:50%;margin-top:-30px;margin-left:-61px;-webkit-transform:translate3d(0,50%,0);transform:translate3d(0,50%,0);-webkit-transition-delay:0s;transition-delay:0s
+    left:50%;
+    top:50%;
+    margin-top:-30px;
+    margin-left:-61px;
+    -webkit-transform:translate3d(0,50%,0);
+    transform:translate3d(0,50%,0);
+    -webkit-transition-delay:0s;transition-delay:0s
 }
 .gallery-list .gallery-thumb .thumbnail-caption-inner .fa-external-link{
     left:50%;top:50%;margin-top:-30px;margin-left:1px;-webkit-transform:translate3d(0,50%,0);transform:translate3d(0,50%,0);-webkit-transition-delay:0s;transition-delay:0s
