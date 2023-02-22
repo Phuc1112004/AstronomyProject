@@ -218,7 +218,6 @@ const observer = new IntersectionObserver(entries => {
 // Observe the target element
 observer.observe(target);
 observer.observe(target0);
-observer.observe(target1);
 
 
 
