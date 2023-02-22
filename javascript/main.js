@@ -224,5 +224,28 @@ observer.observe(target0);
 
 
 
+//form
 
+var prevImg = null;
+
+function showFormat(img) {
+    var selectedImage = document.getElementById("selectedImage");
+    selectedImage.src = img.src;
+    // Remove border from previous image
+    if (prevImg != null) {
+        prevImg.style.border = "none";
+    }
+
+    // Add border to clicked image
+    img.style.border = "3px solid Pink";
+
+    img.style.boxTopRightShadow = "10% 10% #FFC0CB";
+
+    // Get format of the image and display it
+    var format = img.src.split('.').pop().toUpperCase();
+    document.getElementById("format").innerHTML ;
+
+    // Set current image as previous image
+    prevImg = img;
+}
 

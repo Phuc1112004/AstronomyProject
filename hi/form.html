@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
   <link rel="stylesheet" href="../font.css">
   <link rel="stylesheet" href="../solar-system/solar-system.css">
-  <link rel="stylesheet" href="../listhome/css/project.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="../javascript/main.js"></script>
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="../home/home.css">
 
 </head>
 <body>
@@ -18,7 +21,7 @@
 
     <div class="brand collapse navbar-collapse">
 
-      <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px"></h2>
+      <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px" alt=""></h2>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +49,7 @@
       </li>
       <li class="nav-item">
         <div class="dropdown">
-          <button class="dropbtn"><a>GALAXY</a></button>
+          <button class="dropbtn"><a>GALAXIES</a></button>
           <div class="dropdown-content">
             <a href="../galaxies/black-hole.html">Black Hole</a>
             <a href="../galaxies/the-stars.html">The Stars</a>
@@ -78,98 +81,144 @@
 </nav>
 
 <header>
-  <p style="font-size: 25px; float:left;padding-left: 12%;padding-top: 1%;">Home </p>   <!--thay tên trang con-->
+  <p style="font-size: 25px; float:left;padding-left: 12%;padding-top: 1%;">Solar Systeam </p>   <!--thay tên trang con-->
   <p style="font-size: 11px;float: right;padding-right: 13%;padding-top: 2%;">
-    <a href="../home/home.html" style="color: #9eb4cc">Home</a></p> <!--thay tên trang con-->
+    <a href="../home/home.html" style="color: #9eb4cc">Home</a>  // Planet </p> <!--thay tên trang con-->
 </header>
 <br>
-<br>
-<script>
 
-  window.onscroll = function() {
-    var navbar = document.getElementById("navbarSupportedContent");
-    if (window.pageYOffset === 0) {
-      navbar.classList.remove("scrolled");
-    } else {
-      navbar.classList.add("scrolled");
-    }
-
-  };
-</script>
 <!--content-->
 <main>
-  <div class="container p-5">
+  <div class="container fight">
     <div class="row">
-      <div class="col-4 file-text">
-        <h2>Skyline and sparkling images from the space station:</h2>
-        <p>The astronauts of the International Space Station (ISS) have a habit of launching some real photos out of the world that captivate enthusiasts. And more recently, they've come back with the ISS sharing a rare sight—the Earth's skyline at night—that fascinates people.
+      <div class="col-7">
+  <div class="image-big">
+    <img id="selectedImage" src="../media/img123.png">
+  </div>
+        <div class="image-onclick">
+          <img src="../media/hero-map.png" onclick="showFormat(this)">
+          <img src="../media/img123.png" onclick="showFormat(this)" >
+          <img src="../media/footer-img1.jpg" onclick="showFormat(this)">
+          <img src="../media/footer-img1.jpg" onclick="showFormat(this)">
+        </div>
+        <div class="image-onclick">
+          <img src="../media/hero-map.png" onclick="showFormat(this)">
+          <img src="../media/img123.png" onclick="showFormat(this)" >
+          <img src="../media/footer-img1.jpg" onclick="showFormat(this)">
+          <img src="../media/footer-img1.jpg" onclick="showFormat(this)">
+          <div id="format"></div>
+      </div>
+      </div>
+      <div class="col-5 stream"><p>
+        Epoch J2000
+        Aphelion
+        0.466697 AU
+        69,816,900 km
+        Perihelion
+        0.307499 AU
+        46,001,200 km
+        Semi-major axis
+        0.387098 AU
+        57,909,050 km
+        Eccentricity 0.205630[3]
+        Orbital period (sidereal)
+        87.9691 d
+        0.240846
+        </p></div>
+      <div class="col-7 spacing">
+          <p>
+            Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius (Mercury), god of commerce, messenger of the gods, and mediator between gods and mortals, corresponding to the Greek god Hermes (Ἑρμῆς). Like Venus, Mercury orbits the Sun within Earth's orbit as an inferior planet; its apparent distance from the Sun as viewed from Earth never exceeds 28°. This proximity to the Sun means the planet can only be seen near the western horizon after sunset or the eastern horizon before sunrise, usually in twilight. At this time, it may appear as a bright star-like object, but is more difficult to observe than Venus. From Earth, the planet telescopically displays the complete range of phases, similar to Venus and the Moon, which recurs over its synodic period of approximately 116 days. Due to its synodic proximity to Earth, Mercury is most often the closest planet to Earth, with Venus periodically taking this role.[18][19]
 
-          The urban landscape and twinkling lights from outer space may no longer come as a surprise, with recent photos showing the horizon blooming at night. The posts were shared on the ISS's official Twitter page.
+            Mercury rotates in a way that is unique in the Solar System. It is tidally locked with the Sun in a 3:2 spin–orbit resonance,[20] meaning that relative to the fixed stars, it rotates on its axis exactly three times for every two revolutions it makes around the Sun.[a][21] As seen from the Sun, in a frame of reference that rotates with the orbital motion, it appears to rotate only once every two Mercurian years. An observer on Mercury would therefore see only one day every two Mercurian years.
 
-          The agency captioned: "Earth's skyline at night is surrounded by air light surrounded by stars in photographs taken from this station.</p>
-      </div>
-      <div class="col-8">
-        <img src="../media/anh/img.png" style="width: 750px;height: 507px">
-        <p class="text-center">Image taken from iss space touch</p>
-      </div>
-      <p>Besides artificial light on the Earth's surface, the photos also capture the beauty of the natural light ring that surrounds the planet against a starry sky from space.
+            Mercury's axis has the smallest tilt of any of the Solar System's planets (about 1⁄30 degree). Its orbital eccentricity is the largest of all known planets in the Solar System;[b] at perihelion, Mercury's distance from the Sun is only about two-thirds (or 66%) of its distance at aphelion. Mercury's surface appears heavily cratered and is similar in appearance to the Moon's, indicating that it has been geologically inactive for billions of years. Having almost no atmosphere to retain heat, it has surface temperatures that vary diurnally more than on any other planet in the Solar System, ranging from 100 K (−173 °C; −280 °F) at night to 700 K (427 °C; 800 °F) during the day across the equatorial regions.[22] The polar regions are constantly below 180 K (−93 °C; −136 °F). The planet has no natural satellites.
 
-        The ISS also attached a redirect link to NASA Johnson's gallery on Flickr for more images, along with intricate details about the locations taken. The images taken by the crew show the city lights of the Netherlands, England, France and Belgium.
-
-        Perhaps the most interesting image taken by ISS astronauts for Indian enthusiasts is when the ISS is hovering over Afghanistan. The photo not only shows the light of India and neighboring Pakistan, but also captures the well-lit border separating the two countries.
-        NASA and the ISS actively share fascinating astronomical-themed photos from their various social media outlets over time, offering glimpses of Earth and outer space from their unique perspectives. Recent photos depicting a "cosmic rose" and a black hole "tsunami" have sparked curiosity and curiosity about these cosmic events.  The post shared by the ISS has garnered nearly 120,000 likes on Instagram, while the Twitter post has been reposted several thousand times. It seems that one can hardly resist the beauty of the Earth glowing in the aura of the stars.
-      </p>
-      <p><b >The images below are shots of the horizon and shimmering earth: </b>
-      </p>
-      <div class="text-center project">
-      <img src="../media/anh/ISS.jpg">
-        <p>Skyline shot from the space station
-        </p>
+            Two spacecraft have visited Mercury: Mariner 10 flew by in 1974 and 1975; and MESSENGER, launched in 2004, orbited Mercury over 4,000 times in four years before exhausting its fuel and crashing into the planet's surface on April 30, 2015.[23][24][25] The BepiColombo spacecraft is planned to arrive at Mercury in 2025.
+          </p>
       </div>
-      <div class="text-center project">
-      <img src="../media/anh/fIKJayQG.jpg">
-        <p>Continents are adorned with lights at night.
-        </p>
-      </div>
-      <div class="text-center project">
-      <img src="../media/anh/UtVGYxkW.jpg">
-        <p>The UK, Ireland and parts of Western Europe at night
-        </p>
-      </div>
-      <div class="text-center project">
-        <img src="../media/anh/traidat.jpg">
-        <p>Europe, Africa and the Middle East at night
-        </p>
-
-      </div>
-      <p>All Alone in the Night - Time-lapse footage of the Earth as seen from the ISS</p>
-      <div  class="text-center">
-
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/FG0fTKAqZ5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      </div>
-    </div>
-  <div class="container">
-    <div class="row file-text p-3">
-      <h3>RELATED PROJECTS</h3>
-      <div class="col-3">
-        <a href="">
-          <img width="100%" height="300px"  src="../media/anh/img_14.png">
-        </a>
-      </div>
-      <div class="col-3">
-        <a href="">
-          <img width="100%" height="300px" src="../media/anh/img_8.png">
-        </a>
-      </div>
-      <div class="col-3">
-        <a href="">
-          <img width="100%" height="300px" src="../media/anh/img_5.png">
-        </a>
-      </div>
-
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="gallery-list image-smail">
+          <div class="item image-container gallery-thumb" >
+            <div class="gallery-thumb">
+                    <span class="thumbnail-caption-inner">
+                    <a href="../listhome/project2.html" class="fa fa-external-link fa-2x"></a>
+                </span>
+            </div>
+            <a href="#">
+              <img src="../media/anh/img_2.png" alt="">
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="gallery-list image-smail">
+          <div class="item image-container gallery-thumb" >
+            <div class="gallery-thumb ">
+                    <span class="thumbnail-caption-inner ">
+                    <a href="../listhome/project2.html" class=" fa fa-external-link fa-2x"></a>
+                </span>
+            </div>
+            <a href="#">
+              <img src="../media/anh/img_2.png" alt="">
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="gallery-list image-smail">
+          <div class="item image-container gallery-thumb" >
+            <div class="gallery-thumb">
+                    <span class="thumbnail-caption-inner">
+                    <a href="../listhome/project2.html" class="fa fa-external-link fa-2x"></a>
+                </span>
+            </div>
+            <a href="#">
+              <img src="../media/anh/img_2.png" alt="">
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="gallery-list image-smail">
+          <div class="item image-container gallery-thumb" >
+            <div class="gallery-thumb">
+                    <span class="thumbnail-caption-inner">
+                    <a href="../listhome/project2.html" class="fa fa-external-link fa-2x"></a>
+                </span>
+            </div>
+            <a href="#">
+              <img src="../media/anh/img_2.png" alt="">
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </main>
 <!--content end-->
@@ -238,5 +287,6 @@
     <a class="text-reset fw-bold" href="#">PhucTrinh.com</a>
   </div>
 </footer>
+<script src="../test/test.js"></script>
 </body>
 </html>
