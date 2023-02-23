@@ -57,3 +57,11 @@ app.get("/api/posts",function (req,res){           //gọi ra theo đường lin
         else res.send(data);
     });
 });
+
+app.get("/api/planet",function (req,res){           //gọi ra theo đường link
+    var sql="select* from nhom4_planet";
+    conn.query(sql,function (err,data) {
+        if (err) res.send("404 not found");
+        else res.send(data);
+    });
+});
