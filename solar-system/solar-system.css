@@ -75,6 +75,8 @@ section nav ul li{
 }
 
 .image-big img{
+    max-width: 100%;
+    object-fit: cover;
     width: 650px;
     height: 350px;
 }
