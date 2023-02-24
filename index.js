@@ -3,18 +3,18 @@ const app = express();
 const PORT = process.env.PORT || 5000;        // PORT cổng ngẫu nhiên
 
 const configDB = {
-    host: 'localhost',
-    port:3306,
-    user: 'root',
-    password:'',               // dùng xampp thì để trống
-    database:'database-astronomy',
+    host: '139.180.186.20',
+    port: 3306,
+    user: 'demo',
+    password: 's(20A5Q.Mvk(bvoP',               // dùng xampp thì để trống
+    database:'demo_s1',
     multipleStatements: true
 };
 const mysql = require("mysql2");
 const conn = mysql.createConnection(configDB);
 
 app.listen(PORT,function (){
-    console.log("sever is running.....");
+    console.log(`Server is running on port ${PORT}`);
 });
 
 
@@ -53,7 +53,7 @@ app.get("/api/images",function (req,res){           //gọi ra theo đường li
 app.get("/api/posts",function (req,res){           //gọi ra theo đường link
     var sql="select* from nhom4_posts";
     conn.query(sql,function (err,data) {
-        if (err) res.send("404 not found");
+        if (err) res.send("Cannot fetching posts from database");
         else res.send(data);
     });
 });
