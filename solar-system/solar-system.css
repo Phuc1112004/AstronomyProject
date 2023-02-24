@@ -1,3 +1,6 @@
+body{
+    color: whitesmoke;
+}
 section{
     font-family: 'Open Sans', sans-serif
 }
@@ -82,7 +85,7 @@ section nav ul li{
 }
 
 .image-onclick img {
-    width: 170px;
+    width: 150px;
     height: 100px;
     margin-right: 10px;
     /*border-radius:10px;*/
