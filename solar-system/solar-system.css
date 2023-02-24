@@ -1,8 +1,12 @@
 body{
     color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
 }
 section{
     font-family: 'Open Sans', sans-serif
+}
+.section-inf{
+    background-image: url("../media/hero-map.png");
 }
 .inset{
     border-style: inset;
@@ -107,53 +111,86 @@ section nav ul li{
     align-items: center;
 }
 
-.stars {
-    display: flex;
+#Introduction-abc{
+    font-family: "Open Sans";
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    font-size: 14px;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: inherit;
+    visibility: visible;
+    white-space: pre-wrap;
 }
 
-.star {
-    margin-right: 10px;
-    font-size: 24px;
-    color: gray;
-    cursor: pointer;
+/*ảnh tổng quát*/
+.fadeInDown {
+    opacity: 0;
+    animation: fadeInDown 1s ease-in-out forwards;
 }
 
-.star.active {
-    color: gold;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fadeInDown-anh{
+    opacity: 0;
+    animation: fadeInDown-anh 1.3s ease-in-out forwards;
 }
 
-.filled {
-    color: gold;
+@keyframes fadeInDown-anh {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%,0,0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
-.comment-container {
-    max-width: 600px;
-    margin: 0 auto;
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+.inf{
+    opacity: 0;
+    animation: inf 1.3s ease-in-out forwards;
 }
 
-.comments {
-    margin-top: 20px;
+@keyframes inf {
+    from {
+        opacity: 0;
+        transform: translate3d(100%,0,0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+figure blockquote p{
+    font-family: "Open Sans";
+}
+.figure-img{
+    max-width: 100%;
+    object-fit: cover;
+    width: 250px;
+    height: 160px;
 }
 
-.comment {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f7f7f7;
-}
 
-.comment .username {
-    font-weight: bold;
-}
-
-.comment .like-btn {
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.comment .like-count {
-    margin-left: 5px;
-}
-
-.comment .delete-btn {
-    float: right;
-    cursor: pointer;
-}
