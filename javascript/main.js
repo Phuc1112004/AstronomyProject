@@ -198,6 +198,7 @@ $(document).ready(function() {
 // Get the target element you want to observe
 const target = document.querySelector('#canvas-1');
 const target0 = document.getElementById('intro');
+const target1 = document.getElementById('fade-in-up')
 
 // Create an Intersection Observer instance
 const observer = new IntersectionObserver(entries => {
@@ -211,6 +212,7 @@ const observer = new IntersectionObserver(entries => {
             arcMove(20, 'canvas-3', 'procent-3');
             arcMove(50, 'canvas-4', 'procent-4');
             target0.classList.add('fadeInDown');
+            target1.classList.add('fade-in-up');
 }
     });
 });
@@ -218,6 +220,7 @@ const observer = new IntersectionObserver(entries => {
 // Observe the target element
 observer.observe(target);
 observer.observe(target0);
+observer.observe(t)
 
 
 
