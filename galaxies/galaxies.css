@@ -85,15 +85,17 @@ section nav ul li{
 }
 .image-big{
     margin-bottom: 30px;
+    border: 3px solid #324269;
 }
 .spacing{
     margin-top: 150px;
 }
 
 .image-onclick img {
-    width: 150px;
-    height: 100px;
+    width: 100px;
+    height: 60px;
     margin-right: 10px;
+    object-fit: cover;
     /*border-radius:10px;*/
     box-shadow: 0 0 10px #333;
     cursor: pointer;
@@ -147,7 +149,7 @@ section nav ul li{
 }
 .fadeInDown-anh{
     opacity: 0;
-    animation: fadeInDown-anh 1.3s ease-in-out forwards;
+    animation: fadeInDown-anh 1.6s ease-in-out forwards;
 }
 
 @keyframes fadeInDown-anh {
@@ -167,7 +169,7 @@ a{
 }
 .inf{
     opacity: 0;
-    animation: inf 1.3s ease-in-out forwards;
+    animation: inf 1.6s ease-in-out forwards;
 }
 
 @keyframes inf {
@@ -195,8 +197,10 @@ figure blockquote p{
     height: 160px;
     border: 2px solid #2d3e67;
 }
-.figure-img:hover{
-    background-color: rgba(0, 0, 0, 0.8);
+.image-smail img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 
