@@ -147,7 +147,7 @@ section nav ul li{
 }
 .fadeInDown-anh{
     opacity: 0;
-    animation: fadeInDown-anh 1.3s ease-in-out forwards;
+    animation: fadeInDown-anh 1.6s ease-in-out forwards;
 }
 
 @keyframes fadeInDown-anh {
@@ -167,7 +167,7 @@ a{
 }
 .inf{
     opacity: 0;
-    animation: inf 1.3s ease-in-out forwards;
+    animation: inf 1.6s ease-in-out forwards;
 }
 
 @keyframes inf {
