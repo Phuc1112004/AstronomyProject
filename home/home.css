@@ -999,6 +999,25 @@ span#procent-1::after, span#procent-2::after, span#procent-3::after, span#procen
 #Circle{
     width: 100%;
 }
+.social{
+    display: flex;
+}
+.social-icon{
+    background-color: #233144;
+    padding: 20px;
+    font-size: xx-large;
+    color: #ffffff;
+    border-color: #233144;
+    background: rgba(0,0,0,0.1);
+
+}
+.social-icon:hover{
+    background-color: white;
+    color: black;
+}
+.ccc button{
+    height: auto;
+}
 
 
 
