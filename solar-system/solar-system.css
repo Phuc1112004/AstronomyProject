@@ -85,14 +85,15 @@ section nav ul li{
 }
 .image-big{
     margin-bottom: 30px;
+    border: 3px solid #324269;
 }
 .spacing{
     margin-top: 150px;
 }
 
 .image-onclick img {
-    width: 150px;
-    height: 100px;
+    width: 100px;
+    height: 60px;
     margin-right: 10px;
     /*border-radius:10px;*/
     box-shadow: 0 0 10px #333;
