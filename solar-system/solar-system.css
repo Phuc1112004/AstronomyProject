@@ -196,5 +196,10 @@ figure blockquote p{
     height: 160px;
      border: 2px solid #2d3e67;
 }
+.image-smail img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
 
 
