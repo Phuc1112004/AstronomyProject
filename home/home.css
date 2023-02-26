@@ -261,7 +261,6 @@ nav ul li a:hover{
     align-items: center;
 }
 button:hover{
-    height: 80px;
     background: #f0f0f0;
 }
 .dropdown {
@@ -356,7 +355,7 @@ button:hover{
 }
 
 .viet {
-    animation: animated-text 3s steps(30,end) 2s 1 normal both;
+    animation: animated-img 3s steps(30,end) 2s 1 normal both;
 }
 
 .image-container:hover .image-text {
