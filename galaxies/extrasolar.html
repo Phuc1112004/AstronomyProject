@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../font.css">
     <link rel="stylesheet" href="../pages/contact.css">
     <link rel="stylesheet" href="../galaxies/galaxies.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
 
 </head>
@@ -199,12 +200,42 @@
                 <a href="planet.html">Planet</a>
                 <a href="../galaxies/extrasolar.html">Extrasolar</a>
                 <a href="../pages/contact.html">Contact</a>
-                <a href="../pages/about-us.html">About Us</a><hr>
+                <a href="../pages/about-us.html">About Us</a> <br><br><br><hr><br>
             </div><br>
             <h3>The most asked question</h3><br>
             <p>How many planets does the solar system have?</p>
             <p>Is the earth the center of the universe?</p>
             <p>What is the temperature of the planets?</p><br><hr>
+            <br><br>
+            <h3>Planets</h3>
+            <canvas id="myChart" style="width:200px;height: 130px;"></canvas>
+            <script>
+                var xValues = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
+                var yValues = [72, 84, 65, 96, 88];
+                var barColors = ["#14a5d3", "#20baa0","#2e91d2","#f5b343","#ed5b66"];
+
+                new Chart("myChart", {
+                    type: "horizontalBar",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        title: {
+                            display: true,
+                            text: ""
+                        },
+                        scales: {
+                            xAxes: [{ticks: {min: 50, max:100}}]
+                        }
+                    }
+                });
+
+            </script>
         </div>
 
     </div>
