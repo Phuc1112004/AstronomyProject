@@ -194,5 +194,8 @@ figure blockquote p{
     width: 250px;
     height: 160px;
 }
+.figure-img:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 

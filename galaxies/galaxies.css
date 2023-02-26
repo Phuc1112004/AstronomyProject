@@ -1,5 +1,12 @@
+body{
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+}
 section{
     font-family: 'Open Sans', sans-serif
+}
+.section-inf{
+    background-image: url("../media/hero-map.png");
 }
 .inset{
     border-style: inset;
@@ -62,10 +69,133 @@ section nav ul li{
 .pagination ul{
     background-color: #1e3352;
 }
-.ccc button{
-    height: auto;
-}
 .p-1 img{
     width: 90px;
     height: 90px;
 }
+
+.image-big img{
+    max-width: 100%;
+    object-fit: cover;
+    width: 650px;
+    height: 350px;
+}
+.stream{
+    white-space: pre;
+}
+.image-big{
+    margin-bottom: 30px;
+}
+.spacing{
+    margin-top: 150px;
+}
+
+.image-onclick img {
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+    /*border-radius:10px;*/
+    box-shadow: 0 0 10px #333;
+    cursor: pointer;
+}
+.image-onclick {
+    padding-bottom: 30px;
+}
+.image-smail img{
+    width: 300px;
+    height: 300px;
+}
+.thumbnail-caption-inner .fa{
+    transform: translate(-36px, 10px)!important;
+}
+.star-container {
+    display: flex;
+    align-items: center;
+}
+
+#Introduction-abc{
+    font-family: "Open Sans";
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    font-size: 14px;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: inherit;
+    visibility: visible;
+    white-space: pre-wrap;
+}
+
+/*ảnh tổng quát*/
+.fadeInDown {
+    opacity: 0;
+    animation: fadeInDown 1s ease-in-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fadeInDown-anh{
+    opacity: 0;
+    animation: fadeInDown-anh 1.3s ease-in-out forwards;
+}
+
+@keyframes fadeInDown-anh {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%,0,0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+.inf{
+    opacity: 0;
+    animation: inf 1.3s ease-in-out forwards;
+}
+
+@keyframes inf {
+    from {
+        opacity: 0;
+        transform: translate3d(100%,0,0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+figure blockquote p{
+    font-family: "Open Sans";
+}
+.figure-img{
+    max-width: 100%;
+    object-fit: cover;
+    width: 250px;
+    height: 160px;
+}
+.figure-img:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+

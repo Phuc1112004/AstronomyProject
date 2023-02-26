@@ -53,3 +53,19 @@
 .tieude{
     color: #f0f0f0;
 }
+
+nav ul li a {
+    position: relative;
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #f9fcfd;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 13px;
+}
