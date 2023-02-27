@@ -2,9 +2,262 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>black hole</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../list/css/bootstrap.min.css/">
+    <link rel="stylesheet" href="../font.css">
+    <link rel="stylesheet" href="../solar-system/solar-system.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="../javascript/main.js"></script>
+    <link rel="stylesheet" href="../hi/form.css">
+    <link rel="stylesheet" href="../home/home.css">
+    <link rel="stylesheet" href="../solar-system/solar-system.css">
+
 </head>
 <body>
 
+<nav class="navbar navbar-expand transparent " id="navbarSupportedContent">
+    <div class="container-fluid container-transparent">
+
+        <div class="brand collapse navbar-collapse">
+
+            <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px" alt=""></h2>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-transparent">
+            <li class="nav-item"><a class="active " aria-current="page" href="../home/home.html"> Home</a></li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a>SOLAR SYSTEM</a></button>
+                    <div class="dropdown-content">
+                        <a href="../solar-system/planet.html">Planet</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a>GALAXIES</a></button>
+                    <div class="dropdown-content">
+                        <a href="../galaxies/extrasolar.html">Extrasolar</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="../pages/contact.html">Contact</a></button>
+                </div>
+            </li>
+            &emsp;
+            <li>
+                <div class="search-box" style="padding-top: 20px ">
+                    <div class="container-search">
+                        <input type="search" id="search" placeholder="Search..." />
+                        <button class="icon"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<header>
+    <p style="font-size: 25px; float:left;padding-left: 12%;padding-top: 1%;">Extrasolar </p>   <!--thay tên trang con-->
+    <p style="font-size: 11px;float: right;padding-right: 13%;padding-top: 2%;">
+        <a href="../home/home.html" style="color: #9eb4cc">Home</a> // <a href="extrasolar.html" style="color:#9eb4cc;"> Extrasolar </a>      // Black hole </p> <!--thay tên trang con-->
+</header>
+<br><br><br>
+
+<!--content-->
+<main>
+    <div class="container">
+        <div class="row" >
+            <div class="col-4"><br><br><br><br>
+                <div class="image-big">
+                    <img id="selectedImage" src="../media/anh-Galaxy/ho-den.jpg" alt="">
+                </div>
+                <div class="image-onclick text-center">
+                    <img src="../media/anh-Galaxy/ho-den.jpg" onclick="showFormat(this)" alt="">
+                    <img src="../media/anh-Galaxy/hoden1.png" onclick="showFormat(this)" alt="">
+                    <img src="../media/anh-Galaxy/hoden2.png" onclick="showFormat(this)" alt="">
+                </div>
+                <div class="image-onclick text-center">
+                    <img src="../media/anh-Galaxy/hoden3.png" onclick="showFormat(this)" alt="">
+                    <img src="../media/anh-Galaxy/hoden4.png" onclick="showFormat(this)" alt="">
+                    <img src="../media/anh-Galaxy/hoden5.png" onclick="showFormat(this)" alt="">
+                    <div id="format"></div>
+                </div><hr><br>
+                <h3>The most asked question</h3><br>
+                <p>How many planets does the solar system have?</p>
+                <p>Is the earth the center of the universe?</p>
+                <p>What is the temperature of the planets?</p><br>
+                <hr><br>
+                <h3>Tags</h3>
+                <div class="tags"><br>
+                    <a href="../solar-system/planet.html">Planet</a>
+                    <a href="extrasolar.html">Extrasolar</a>
+                    <a href="../pages/contact.html">Contact</a>
+                    <a href="../pages/about-us.html">About Us</a>
+                </div>
+            </div>
+
+            <div class="col"></div>
+            <div class="col-7 ">
+
+                <h3>Black Hole </h3><br> <hr><br>
+                <p>
+                   <strong> A black hole</strong>  is a region of space from which nothing, not even light, can escape. According to the general theory of relativity, it starts existing when spacetime gets curved by a huge mass. There is a sphere around the black hole. If something goes inside the sphere, it can not leave. This sphere is called the event horizon. A black hole is black because it absorbs all the light that hits it. It reflects nothing, just like a perfect black body in thermodynamics. Under quantum mechanics, black holes have a temperature and emit Hawking radiation, which makes them slowly get smaller.<br>
+
+                    Because black holes are very hard to see, people find them by the way they affect other things near them. The place where there is a black hole can be found by tracking the movement of stars that orbit somewhere in space. Or people can find it when gas falls into a black hole, because the gas heats up and is very bright. This can be found by telescopes on Earth or by Earth-orbiting telescopes. Inside a black hole the rules of physics are very different.<br>
+
+                    Astronomers have found evidence of supermassive black holes at the center of almost all galaxies. In 2008 astronomers found evidence that a supermassive black hole of more than four million solar masses is near the Sagittarius A* part of the Milky Way galaxy.
+                </p>
+                <br><h5>Formation of black holes</h5>
+                <p>
+                    The gravitational collapse of huge (high-mass) stars cause "stellar mass" black holes. Star formation in the early universe may have created very big stars. When they collapsed they made black holes of up to 10<sup>3</sup> solar masses. These black holes may be the seeds of the supermassive black holes found in the centers of most galaxies.<br>
+
+                    Most of the energy released in gravitational collapse is given off very quickly. A distant observer sees the material falling in slowly and then stop just above the event horizon because of gravitational time dilation. The light given off just before the event horizon is delayed an infinite amount of time. So the observer never sees the formation of the event horizon. Instead, the collapsing material seems to become dimmer and increasingly red-shifted, eventually fading away.
+                </p>
+                <br><h5>Properties of black holes</h5>
+                <p>
+                    The no hair theorem states that a stable black hole has only three independent physical properties: mass, charge, and angular momentum. If this is true, then any two black holes that have the same values for these three properties will look the same. As of 2020, it is unclear if the no hair theorem is true for real black holes.<br>
+
+                    The properties are special, because all three can be measured from outside the black hole. For example, a charged black hole repels other like charges just like any other charged object. Similarly, the total mass inside a sphere containing a black hole can be found by using the gravitational analog of Gauss's law, far away from the black hole. The angular momentum or spin can also be measured from far away.
+                </p>
+                <br><h5>Hawking radiation</h5>
+                <p>
+                    Hawking radiation is black body radiation which is emitted by black hole, due to quantum effects near the event horizon. It is named after the physicist Stephen Hawking, who provided a theoretical argument for its existence in 1974.<br>
+
+                    Hawking radiation reduces the mass and the energy of the black hole and is therefore also known as black hole evaporation. This happens because of the virtual particle-antiparticle pairs. Due to quantum fluctuations, this is when one of the particles falls in and the other gets away with the energy/mass. Because of this, black holes that lose more mass than they gain through other means are expected to shrink and ultimately vanish. Micro black holes (MBHs) are predicted to be larger net emitters of radiation than larger black holes and should shrink and dissipate faster.
+                </p>
+            </div>
+    </div>
+    </div>
+
+
+    <div class="container p-2">
+        <h2>Related</h2>
+        <hr>
+        <div class="row">
+            <div class="col-3">
+                <div class="gallery-list image-smail">
+                    <div class="item image-container gallery-thumb" >
+                        <div class="gallery-thumb">
+                    <span class="thumbnail-caption-inner">
+                    <a href="../solar-system/the-jupiter.html" class="fa fa-external-link fa-2x"></a>
+                </span>
+                        </div>
+                        <a href="../solar-system/the-jupiter.html">
+                            <img src="../media/anh-SolarSystem/sao-moc2.jpg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="gallery-list image-smail">
+                    <div class="item image-container gallery-thumb" >
+                        <div class="gallery-thumb ">
+                    <span class="thumbnail-caption-inner ">
+                    <a href="../solar-system/the-earth.html" class=" fa fa-external-link fa-2x"></a>
+                </span>
+                        </div>
+                        <a href="../solar-system/the-earth.html">
+                            <img src="../media/anh-SolarSystem/trai-dat3.jpg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="gallery-list image-smail">
+                    <div class="item image-container gallery-thumb" >
+                        <div class="gallery-thumb">
+                    <span class="thumbnail-caption-inner">
+                    <a href="../solar-system/the-mars.html" class="fa fa-external-link fa-2x"></a>
+                </span>
+                        </div>
+                        <a href="../solar-system/the-mars.html">
+                            <img src="../media/anh-SolarSystem/sao-hoa1.jpg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="gallery-list image-smail">
+                    <div class="item image-container gallery-thumb" >
+                        <div class="gallery-thumb">
+                    <span class="thumbnail-caption-inner">
+                    <a href="../solar-system/the-mercury.html" class="fa fa-external-link fa-2x"></a>
+                </span>
+                        </div>
+                        <a href="../solar-system/the-mercury.html">
+                            <img src="../media/anh-SolarSystem/sao-thuy2.jpg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+
+</main>
+<!--content end-->
+
+
+<!--footer cứ cop rồi gắn vào-->
+<footer class="text-center text-lg-start bg-light text-muted card-footer" ><br><hr>
+    <div class="container text-center text-md-start mt-5 ">
+        <div class="row mt-3">
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <a class="card-footercol-3" href="../home/home.html"><img src="../media/logo/logo.jpg" alt="..." style="width: 200px;height: 120px;padding-left: 10px"></a>
+                <p><i class="bi bi-globe-asia-australia" style="color: white;font-size: 20px"></i>&ensp;101 West Street, New York, NY 12345</p>
+
+                <p><i class="bi bi-telephone-inbound" style="color: white"></i>&ensp; +84 999 999 999 </p>
+                <p><i class="bi bi-envelope-open" style="color: white"></i>&ensp; abcd123@gmail.com</p>
+                <p><i class="bi bi-facebook"></i>&ensp;
+                    <i class="bi bi-twitter"></i>&ensp;
+                    <i class="bi bi-youtube"></i>&ensp;
+                    <i class="bi bi-instagram"></i>&ensp;
+                    <i class="bi bi-tiktok"></i>&ensp;
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4 table-hover">
+                <h4 class="text-uppercase fw-bold mb-4" style="color: whitesmoke">
+                    RECENT POSTS
+                </h4>
+                <h5 style="color: #babbbc">How many galaxies are in the known universe?</h5><br>
+                <p> Cloudy weather on titan is made of methane<br>
+                    Fusce vel mauris vel nulla pellentesque egestas. In vestibulum risus nec nisi...
+                    <br><br>August 6, 2014</p>
+            </div>
+
+            <div class="card col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
+                <div class="card-body" >
+                    <h5 class="card-title">Subscribe newsletter</h5>
+                    <p class="card-text" style="color: #4f5050">Enter your email to receive our latest update and offer !</p>
+                    <form class="mb-3" name="form" action="#" method="get">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]8,$">
+                        <br>
+                        <button style="background-color: #1e2125;width: 150px;height: 40px" ><h6 style="padding-top: 8px;color: white">SUBCRIBE NOW</h6></button>
+                    </form><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="text-center p-4" style="background: rgba(0,0,0,0.3);">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="#">PhucTrinh.com</a>
+    </div>
+</footer>
+<script src="../test/test.js"></script>
 </body>
 </html>
