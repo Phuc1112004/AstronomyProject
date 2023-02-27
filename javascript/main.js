@@ -117,21 +117,6 @@ new Chart("myChart", {
     }
 });
 
-const element = document.querySelector('#my-element');
-
-function slideInLeft() {
-    const elementPosition = element.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / .1;
-
-    if (elementPosition < screenPosition) {
-        element.classList.add('slideInLeft');
-    }
-}
-
-window.addEventListener('scroll', slideInLeft);
-
-const elementt = document.getElementById("elementt");
-elementt.classList.add("slideInRight");
 
 
 
@@ -149,6 +134,9 @@ elementt.classList.add("slideInRight");
 $(document).ready(function() {
     $('#myDiv').addClass('animated fadeInDown');
 });
+// $(document).ready(function() {
+//     $('#myDiv').addClass('animated fade-in-up');
+// });
 
 
 
@@ -198,21 +186,24 @@ $(document).ready(function() {
 // Get the target element you want to observe
 const target = document.querySelector('#canvas-1');
 const target0 = document.getElementById('intro');
-const target1 = document.getElementById('fade-in-up')
+
 
 // Create an Intersection Observer instance
 const observer = new IntersectionObserver(entries => {
     // Loop through the entries array
     entries.forEach(entry => {
+
         // Check if the target element is intersecting with the viewport
         if (entry.isIntersecting) {
+
             // Target element is entering the viewport, do something
             arcMove(60, 'canvas-1', 'procent-1');
             arcMove(40, 'canvas-2', 'procent-2');
             arcMove(20, 'canvas-3', 'procent-3');
             arcMove(50, 'canvas-4', 'procent-4');
             target0.classList.add('fadeInDown');
-            target1.classList.add('fade-in-up');
+
+
 }
     });
 });
@@ -220,7 +211,8 @@ const observer = new IntersectionObserver(entries => {
 // Observe the target element
 observer.observe(target);
 observer.observe(target0);
-observer.observe(t)
+
+
 
 
 
