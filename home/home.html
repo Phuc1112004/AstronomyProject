@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../pages/about-us.css">
 
 
 
@@ -25,7 +27,7 @@
 
         <div class="brand collapse navbar-collapse">
 
-            <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px"></h2>
+            <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px" alt=""></h2>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +40,16 @@
                     <button class="dropbtn"><a>SOLAR SYSTEM</a></button>
                     <div class="dropdown-content">
                         <a href="../solar-system/planet.html">Planet</a>
+                        <a href="../solar-system/trajectory.html">Trajectory</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a>SPACE TECH</a></button>
+                    <div class="dropdown-content">
+                        <a href="../space-tech/satellite.html">Satellite</a>
+                        <a href="../space-tech/spaceship.html">Spaceship</a>
                     </div>
                 </div>
             </li>
@@ -45,20 +57,27 @@
                 <div class="dropdown">
                     <button class="dropbtn"><a>GALAXIES</a></button>
                     <div class="dropdown-content">
-                        <a href="../galaxies/extrasolar.html">Extrasolar</a>
+                        <a href="../galaxies/black-hole.html">Black Hole</a>
+                        <a href="../galaxies/the-stars.html">The Stars</a>
+                        <a href="../galaxies/meteorites.html">Meteorites</a>
+                        <a href="../galaxies/nebulae.html">Nebulae</a>
                     </div>
                 </div>
             </li>
             <li class="nav-item">
                 <div class="dropdown">
-                    <button class="dropbtn"><a href="../pages/contact.html">Contact</a></button>
+                    <button class="dropbtn"><a>PAGES</a></button>
+                    <div class="dropdown-content">
+                        <a href="../pages/contact.html">Contact</a>
+                        <a href="../pages/about-us.html">About Us</a>
+                    </div>
                 </div>
             </li>
             &emsp;
             <li>
                 <div class="search-box" style="padding-top: 20px ">
                     <div class="container-search">
-                        <input type="search" id="search" placeholder="Search..." />
+                        <label for="search"></label><input type="search" id="search" placeholder="Search..." />
                         <button class="icon"><i class="bi bi-search"></i></button>
                     </div>
                 </div>
@@ -110,14 +129,15 @@
         <h2>WE ARE AN ASTRONOMY COMPANY</h2>
     </section>
     <hr class="stylish-hr">
-    <div class="Introduction-to-astronomy text-center fadeInDown">
+    <div class="Introduction-to-astronomy text-center">
         <p id="Introduction">       Astronomy is the scientific study of celestial bodies (such as stars, planets, comets,
             nebulae, clusters, galaxies) and phenomena originating outside the universe (such as cosmic background radiation). </p>
     </div>
     </div>
 
-    <div class="container" id="">
-        <div class="row row-cols-2 card-group card1 fade-in-up">
+    <div class="container " >
+        <div class="row row-cols-2 card-group card1 box animate__animated animate__fadeInUp" >
+
             <div class="col-3">
                 <div class="card p-3 g-5 background" style="width: 14rem;">
                     <div class="card-body ten">
@@ -129,7 +149,7 @@
                             adipiscing elit.</p>
                     </div>
                     <div class="card-body right">
-                        <a href="../solar-system/planet.html" class="card-link read-more">read more</a>
+                        <a href="#" class="card-link read-more">read more</a>
                     </div>
                 </div>
             </div>
@@ -146,7 +166,7 @@
                             adipiscing elit.</p>
                     </div>
                     <div class="card-body right">
-                        <a href="../solar-system/the-earth.html" class="card-link read-more">read more</a>
+                        <a href="#" class="card-link read-more">read more</a>
                     </div>
                 </div>
             </div>
@@ -162,7 +182,7 @@
                             adipiscing elit.</p>
                     </div>
                     <div class="card-body right">
-                        <a href="../galaxies/extrasolar.html" class="card-link read-more">read more</a>
+                        <a href="#" class="card-link read-more">read more</a>
                     </div>
                 </div>
             </div>
@@ -183,15 +203,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row box animate__animated animate__fadeInDown">
             <div class="col-10">
-                <h2 class="h22 fadeInDown">
+                <h2 class="h22 ">
                     Recent Projects
                     <hr class="hrr">
-                </h2>
-            </div>
-            <div>
-                <h2>
                 </h2>
             </div>
         </div>
@@ -200,7 +216,8 @@
 
     <!--  Demos -->
     <!-- The trigger for the Lightbox -->
-    <div class="owl-carousel fade-in-up">
+    <div>
+    <div class="owl-carousel box animate__animated animate__flipInX">
 
         <div class="gallery-list">
             <div class="item image-container gallery-thumb">
@@ -244,11 +261,11 @@
                     <a href="#" class="fa fa-search fa-2x magnific-img zoom">
                         <img class="h-0" src="../media/anh/img_3.png" alt="">
                     </a>
-                    <a href="../solar-system/the-sun.html" class="fa fa-external-link fa-2x"></a>
+                    <a href="../listhome/project3.html" class="fa fa-external-link fa-2x"></a>
                 </span>
                 </div>
                 <a href="#" >
-                    <img src="../media/anh-SolarSystem/mat-troi.jpg" alt="">
+                    <img src="../media/anh/img_3.png" alt="">
                 </a>
 
             </div>
@@ -261,11 +278,11 @@
                     <a href="#" class="fa fa-search fa-2x magnific-img zoom">
                         <img class="h-0" src="../media/anh/img_4.png" alt="">
                     </a>
-                    <a href="../solar-system/the-earth.html" class="fa fa-external-link fa-2x"></a>
+                    <a href="../listhome/project4.html" class="fa fa-external-link fa-2x"></a>
                 </span>
                 </div>
                 <a href="#" >
-                    <img src="../media/anh/traidat.jpg" alt="">
+                    <img src="../media/anh/img_4.png" alt="">
                 </a>
 
             </div>
@@ -278,11 +295,11 @@
                     <a href="#" class="fa fa-search fa-2x magnific-img zoom">
                         <img class="h-0" src="../media/anh/img_5.png" alt="">
                     </a>
-                    <a href="../solar-system/the-mercury.html" class="fa fa-external-link fa-2x"></a>
+                    <a href="../listhome/project5.html" class="fa fa-external-link fa-2x"></a>
                 </span>
                 </div>
                 <a href="#" >
-                    <img src="../media/anh-SolarSystem/sao-thuy.jpg" alt="">
+                    <img src="../media/anh/img_5.png" alt="">
                 </a>
 
             </div>
@@ -295,11 +312,11 @@
                     <a href="#" class="fa fa-search fa-2x magnific-img zoom">
                         <img class="h-0" src="../media/anh/img_6.png" alt="">
                     </a>
-                    <a href="../solar-system/the-mars.html" class="fa fa-external-link fa-2x"></a>
+                    <a href="../listhome/project7.html" class="fa fa-external-link fa-2x"></a>
                 </span>
                 </div>
                 <a href="#" >
-                    <img src="../media/anh-SolarSystem/sao-hoa.png" alt="">
+                    <img src="../media/anh/img_6.png" alt="">
                 </a>
             </div>
         </div>
@@ -309,13 +326,13 @@
                 <div class="gallery-thumb">
                     <span class="thumbnail-caption-inner">
                     <a href="#" class="fa fa-search fa-2x magnific-img zoom">
-                        <img class="h-0" src="../media/anh/img_7.jpg" alt="">
+                        <img class="h-0" src="../media/anh/img_7.png" alt="">
                     </a>
-                    <a href="../solar-system/th" class="fa fa-external-link fa-2x"></a>
+                    <a href="../listhome/project7.html" class="fa fa-external-link fa-2x"></a>
                 </span>
                 </div>
                 <a href="#" >
-                    <img src="../media/anh/img_7.jpg" alt="">
+                    <img src="../media/anh/img_7.png" alt="">
                 </a>
 
             </div>
@@ -341,19 +358,18 @@
                 <div class="gallery-thumb">
                     <span class="thumbnail-caption-inner">
                     <a href="#" class="fa fa-search fa-2x magnific-img zoom">
-                        <img class="h-0" src="../media/anh/img9.jpg" alt="">
+                        <img class="h-0" src="../media/anh/img_9.png" alt="">
                     </a>
                     <a href="../listhome/project9.html" class="fa fa-external-link fa-2x"></a>
                 </span>
                 </div>
                 <a href="#" >
-                    <img src="../media/anh/img9.jpg" alt="">
+                    <img src="../media/anh/img_9.png" alt="">
                 </a>
             </div>
         </div>
-
-
     </div>
+
 
 
     <div id="lightbox" style="display: none;">
@@ -367,7 +383,7 @@
     <div class="container m-5">
         <div class="row">
             <div class="col-6">
-                <div id="my-element">
+                <div class="box animate__animated animate__slideInLeft">
                 <h3 style="font-family: 'Chakra Petch', sans-serif;line-height: 27px"> SOLAR SYSTEM</h3><br>
                 <div class="tien">
                     <div class="tab-container" style="width: 500px; ">
@@ -389,13 +405,13 @@
                 </div>
                 </div>
             </div>
-            <div class="col-6" id="elementt" >
+            <div class="col-6 box animate__animated animate__slideInRight" >
                 <h3 style="font-family: 'Chakra Petch', sans-serif; line-height: 20px">PLANETS</h3>
                 <canvas id="myChart" style="width: 550px; max-width: 550px; height: 550px; display: block;" width="494" height="197"></canvas>
             </div>
         </div>
     </div>
-    <h2 class="h22 text-center p-6 animate__slideInUp">
+    <h2 class="h22 text-center p-6 box animate__animated animate__slideInUp">
         OUR PROCESS
         <hr class="hrrr">
     </h2>
@@ -434,7 +450,7 @@
         <div class="col-9">
             <div class="container text-center">
                 <div class="row  ">
-                    <div class="ccc">
+                    <div>
                         &ensp;  <button type="button"  class=" col-2 social-icon"><i class="bi bi-facebook"></i></button>
                         &ensp;  <button type="button"  class=" col-2 social-icon "><i class="bi bi-google"></i></button>
                         &ensp;  <button type="button"  class=" col-2 social-icon "><i class="bi bi-twitter"></i> </button>
@@ -445,7 +461,7 @@
 
 
                 <div class="row " style="padding-top: 10px;">
-                    <div class="ccc">
+                    <div>
                         &ensp;  <button type="button"  class=" col-2 social-icon "><i class="bi bi-instagram"></i></i></button>
                         &ensp;  <button type="button"  class=" col-2 social-icon "><i class="bi bi-skype"></i></button>
                         &ensp;  <button type="button"  class=" col-2 social-icon "><i class="bi bi-dribbble"></i></button>
@@ -459,10 +475,12 @@
 
 
 
-
-
-
     <script src="../javascript/main.js"></script>
+    <section class="animated-section animate__animated animate__fadeInUp">
+        <!-- Your content here --><p> việt</p>
+    </section>
+
+
     <!--        viết code ở đây-->
     <!--        viết code ở đây-->
     <!--        viết code ở đây-->
@@ -473,6 +491,7 @@
         <p>We are looking for talented folks</p>
         </div>
     </div>
+    <script src="javascript/main.js"></script>
 
 
 </main>
