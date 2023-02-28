@@ -38,6 +38,7 @@
 .social-icon:hover{
     background-color: white;
     color: black;
+    height: auto;
 }
 .ccc button{
     height: auto;
