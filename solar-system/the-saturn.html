@@ -74,21 +74,10 @@
 <main>
     <div class="container fight section-inf">
         <div class="row" >
-            <div class="col-6 fadeInDown-anh ">
-                <p>
-                <h3>The Saturn<hr> </h3>
-                Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter.<img alt="" src="../media/anh-SolarSystem/sao-tho3.jpg" style="float:left;width:270px;height:160px;border: 2px solid #2d3e67;object-fit: cover"> It is a gas giant with an average radius of about nine and a half times that of Earth.[23][24] It has only one-eighth the average density of Earth, but is over 95 times more massive.[25][26][27]<br>
-
-                Saturn's interior is most likely composed of a rocky core, surrounded by a deep layer of metallic hydrogen, an intermediate layer of liquid hydrogen and liquid helium, and finally, a gaseous outer layer. Saturn has a pale yellow hue due to ammonia crystals in its upper atmosphere. An electrical current within the metallic hydrogen layer is thought to give rise to Saturn's planetary magnetic field, which is weaker than Earth's, but which has a magnetic moment 580 times that of Earth due to Saturn's larger size. Saturn's magnetic field strength is around one-twentieth of Jupiter's.[28] The outer atmosphere is generally bland and lacking in contrast, although long-lived features can appear. Wind speeds on Saturn can reach 1,800 kilometres per hour (1,100 miles per hour), higher than on Jupiter but not as high as on Neptune.[29]<br>
-
-                The planet's most notable feature is its prominent ring system, which is composed mainly of ice particles, with a smaller amount of rocky debris and dust. At least 83 moons[30] are known to orbit Saturn, of which 53 are officially named; this does not include the hundreds of moonlets in its rings. Titan, Saturn's largest moon and the second largest in the Solar System, is larger (while less massive) than the planet Mercury and is the only moon in the Solar System to have a substantial atmosphere<br>
-                Saturn is a gas giant composed predominantly of hydrogen and helium. It lacks a definite surface, though it is likely to have a solid core.<img alt="" src="../media/anh-SolarSystem/sao-tho5.jpg" style="float:right;width:270px;height:180px;border: 2px solid #2d3e67;">[34] Saturn's rotation causes it to have the shape of an oblate spheroid; that is, it is flattened at the poles and bulges at its equator. Its equatorial and polar radii differ by almost 10%: 60,268 km versus 54,364 km.[11] Jupiter, Uranus, and Neptune, the other giant planets in the Solar System, are also oblate but to a lesser extent. The combination of the bulge and rotation rate means that the effective surface gravity along the equator, 8.96 m/s2, is 74% of what it is at the poles and is lower than the surface gravity of Earth. However, the equatorial escape velocity of nearly 36 km/s is much higher than that of Earth.[35]<br>
-
-                Saturn is the only planet of the Solar System that is less dense than water—about 30% less.[36] Although Saturn's core is considerably denser than water, the average specific density of the planet is 0.69 g/cm3 due to the atmosphere. Jupiter has 318 times Earth's mass,[37] and Saturn is 95 times Earth's mass.[11] Together, Jupiter and Saturn hold 92% of the total planetary mass in the Solar System.<br>
-                The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume.[52] The proportion of helium is significantly deficient compared to the abundance of this element in the Sun.[39] The quantity of elements heavier than helium (metallicity) is not known precisely, but the proportions are assumed to match the primordial abundances from the formation of the Solar System. The total mass of these heavier elements is estimated to be 19–31 times the mass of the Earth, with a significant fraction located in Saturn's core region.[53]<br>
-
-                Trace amounts of ammonia, acetylene, ethane, propane, phosphine, and methane have been detected in Saturn's atmosphere.[54][55][56] The upper clouds are composed of ammonia crystals, while the lower level clouds appear to consist of either ammonium hydrosulfide (NH4SH) or water.[57] Ultraviolet radiation from the Sun causes methane photolysis in the upper atmosphere, leading to a series of hydrocarbon chemical reactions with the resulting products being carried downward by eddies and diffusion. This photochemical cycle is modulated by Saturn's annual seasonal cycle.[56] Cassini observed a series of cloud features found in northern latitudes, nicknamed the "String of Pearls". These features are cloud clearings that reside in deeper cloud layers<br>
-                </p>
+            <div  class="col-6 fadeInDown-anh" >
+                <select disabled style="opacity: 0; " name="content" id="content3" onchange="planet()"></select>
+                <h1 id="title1"></h1><hr>
+                <p id="contentc"></p>
             </div>
             <div class="col"></div>
             <div class="col-5 inf"><br><br><br>
@@ -281,5 +270,29 @@
     </div>
 </footer>
 <script src="../test/test.js"></script>
+
+<script type="text/javascript">
+    function planet(){
+        // Step 1: GET DATA FROM WEB API
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (){
+            // Step 2: Transfer to js object
+            var result = this.responseText;
+            var data = JSON.parse(result);
+            // end step 2
+            console.log(data);
+            // Step 3: using data
+            var id1 = data.title;
+            var id = document.getElementById("title1");
+            id.innerText = id1;
+            var temp = data.content;
+            var content = document.getElementById("contentc");
+            content.innerText = temp;
+        }
+        xhttp.open("GET",`http://localhost:5000/api/posts/detail?id=7`);
+        xhttp.send();
+    }
+    planet();
+</script>
 </body>
 </html>

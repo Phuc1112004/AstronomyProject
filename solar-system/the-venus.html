@@ -74,18 +74,10 @@
 <main>
     <div class="container fight section-inf">
         <div class="row" >
-            <div class="col-6 fadeInDown-anh">
-                <p>
-                <h3>The Venus<hr> </h3>
-                Venus is the second planet from the Sun. It is sometimes called Earth's "sister" or "twin" planet as it is almost as large and has a similar composition. As an interior planet to Earth, Venus (like Mercury) appears in Earth's sky never far from the Sun, either as morning star or evening star. Aside from the Sun and Moon, Venus is the brightest natural object in Earth's sky, capable of casting visible shadows on Earth in dark conditions and being visible to the naked eye in broad daylight.[19][20]
-
-                Venus is the second largest terrestrial object of the Solar System. It has a surface gravity slightly lower than on Earth and has a weak induced magnetosphere. The atmosphere of Venus consists mainly of carbon dioxide, and, at the planet’s surface, is the densest and hottest of the atmospheres of the four terrestrial planets. With an atmospheric pressure at the planet's surface of about 92 times the sea level pressure of Earth and a mean temperature of 737 K (464 °C; 867 °F), the carbon dioxide gas at Venus's surface is in the supercritical phase of matter. Venus is shrouded by an opaque layer of highly reflective clouds of sulfuric acid, making it the planet with the highest albedo in the Solar System. It may have had water oceans in the past,[21][22] but after these evaporated the temperature rose under a runaway greenhouse effect.[23] The possibility of life on Venus has long been a topic of speculation but research has not produced convincing evidence thus far.
-
-                Like Mercury, Venus does not have any moons.[24] Solar days on Venus, with a length of 117 Earth days,[25] are just about half as long as its solar year, orbiting the Sun every 224.7 Earth days.[26] This Venusian daylength is a product of it rotating against its orbital motion, halving its full sidereal rotation period of 243 Earth days, the longest of all the Solar System planets. Venus and Uranus are the only planets with such a retrograde rotation, making the Sun move in their skies from their western horizon to their eastern. The orbit of Venus around the Sun is the closest to Earth's orbit, bringing them closer than any other pair of planets. This occurs during inferior conjunction with a synodic period of 1.6 years. However, Mercury is more frequently the closest to each.
-
-                The orbits of Venus and Earth result in the lowest gravitational potential difference and lowest delta-v needed to transfer between them than to any other planet. This has made Venus a prime target for early interplanetary exploration. It was the first planet beyond Earth that spacecraft were sent to, starting with Venera 1 in 1961, and the first planet to be reached, impacted and in 1970 successfully landed on by Venera 7. As one of the brightest objects in the sky, Venus has been a major fixture in human culture for as long as records have existed. It has been made sacred to gods of many cultures, gaining its mainly used name from the Roman goddess of love and beauty which it is associated with. Furthermore, Venus has been a prime inspiration for writers, poets and scholars. Venus was the first planet to have its motions plotted across the sky, as early as the second millennium BCE.[27] Plans for better exploration with rovers or atmospheric missions, potentially crewed, at levels with almost Earth-like conditions have been proposed.
-                Venus has a dense atmosphere composed of 96.5% carbon dioxide, 3.5% nitrogen—both exist as supercritical fluids at the planet's surface—and traces of other gases including sulfur dioxide.[30] The mass of its atmosphere is 92 times that of Earth's, whereas the pressure at its surface is about 93 times that at Earth's—a pressure equivalent to that at a depth of nearly 1 km (5⁄8 mi) under Earth's oceans. The density at the surface is 65 kg/m3 (4.1 lb/cu ft), 6.5% that of water or 50 times as dense as Earth's atmosphere at 293 K (20 °C; 68 °F) at sea level. The CO2-rich atmosphere generates the strongest greenhouse effect in the Solar System, creating surface temperatures of at least 735 K (462 °C; 864 °F).[26][31] This makes the Venusian surface hotter than Mercury's, which has a minimum surface temperature of 53 K (−220 °C; −364 °F) and maximum surface temperature of 700 K (427 °C; 801 °F),[32][33] even though Venus is nearly twice Mercury's distance from the Sun and thus receives only 25% of Mercury's solar irradiance. Because of its runaway greenhouse effect, Venus has been identified by scientists such as Carl Sagan as a warning and research object linked to climate change on Earth
-                </p>
+            <div  class="col-6 fadeInDown-anh" >
+                <select disabled style="opacity: 0; " name="content" id="content3" onchange="planet()"></select>
+                <h1 id="title1"></h1><hr>
+                <p id="contentc"></p>
             </div>
             <div class="col"></div>
             <div class="col-5 inf"><br><br><br>
@@ -278,5 +270,29 @@
     </div>
 </footer>
 <script src="../test/test.js"></script>
+
+<script type="text/javascript">
+    function planet(){
+        // Step 1: GET DATA FROM WEB API
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (){
+            // Step 2: Transfer to js object
+            var result = this.responseText;
+            var data = JSON.parse(result);
+            // end step 2
+            console.log(data);
+            // Step 3: using data
+            var id1 = data.title;
+            var id = document.getElementById("title1");
+            id.innerText = id1;
+            var temp = data.content;
+            var content = document.getElementById("contentc");
+            content.innerText = temp;
+        }
+        xhttp.open("GET",`http://localhost:5000/api/posts/detail?id=5`);
+        xhttp.send();
+    }
+    planet();
+</script>
 </body>
 </html>
