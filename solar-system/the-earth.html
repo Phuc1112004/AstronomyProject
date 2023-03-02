@@ -75,28 +75,10 @@
 <main>
     <div class="container fight section-inf">
         <div class="row" >
-            <div class="col-6 fadeInDown-anh">
-
-                <h3>The Earth </h3><hr>
-                <p>Earth is the third planet from the Sun and the only place known in the universe where life has originated and found habitability. While large volumes of water can be found throughout the Solar System, only Earth sustains liquid surface water. Approximately 70.8% of Earth's surface is made up of the ocean, dwarfing Earth's polar ice, lakes, and rivers.<img src="../media/anh-SolarSystem/trai-dat1.jpg" style="float:right;width:250px;height:155px;border: 2px solid #2d3e67;" alt=""> The remaining 29.2% of Earth's surface is land, consisting of continents and islands. Earth's surface layer is formed of several slowly moving tectonic plates, which interact to produce mountain ranges, volcanoes, and earthquakes. Earth's liquid outer core generates the magnetic field that shapes the magnetosphere of Earth, deflecting destructive solar winds.<br>
-
-                The atmosphere of Earth consists mostly of nitrogen and oxygen. Greenhouse gases in the atmosphere like carbon dioxide (CO2) trap a part of the energy from the Sun close to the surface. Water vapor is widely present in the atmosphere and forms clouds that cover most of the planet. More solar energy is received by tropical regions than polar regions and is redistributed by atmospheric and ocean circulation. A region's climate is governed not only by latitude but also by elevation and proximity to moderating oceans. In most areas, severe weather, such as tropical cyclones, thunderstorms, and heat waves, occurs and greatly impacts life.<br>
-
-                Earth is an ellipsoid with a circumference of about 40,000 km. It is the densest planet in the Solar System. Of the four rocky planets, it is the largest and most massive. Earth is about eight light-minutes away from the Sun and orbits it, taking a year (about 365.25 days) to complete one revolution. The Earth rotates around its own axis in slightly less than a day (in about 23 hours and 56 minutes). The Earth's axis of rotation is tilted with respect to the perpendicular to its orbital plane around the Sun, producing seasons. Earth is orbited by one permanent natural satellite, the Moon, which orbits Earth at 384,400 km (1.28 light seconds) and is roughly a quarter as wide as Earth. Through tidal locking, the Moon always faces the Earth with the same side, which causes tides, stabilizes Earth's axis, and gradually slows its rotation.<br>
-
-                Earth, like most other bodies in the Solar System, formed 4.5 billion years ago from gas in the early Solar System. During the first billion years of Earth's history, the ocean formed and then life developed within it. Life spread globally and began to affect Earth's atmosphere and surface, leading to the Great Oxidation Event two billion years ago. Humans emerged 300,000 years ago, and have reached a population of 8 billion today. Humans depend on Earth's biosphere and natural resources for their survival, but have increasingly impacted the planet's environment. Humanity's current impact on Earth's climate and biosphere is unsustainable, threatening the livelihood of humans and many other life, causing widespread extinctions. </p>
-                <br>
-                <h5>The formation of the earth</h5>
-                <p> The oldest material found in the Solar System is dated to 4.5682+0.0002
-                    −0.0004 Ga (billion years) ago. By 4.54±0.04 Ga the primordial Earth had formed. The bodies in the Solar System formed and evolved with the Sun. In theory, a solar nebula partitions a volume out of a molecular cloud by gravitational collapse,<img alt="" src="../media/anh-SolarSystem/traidat6.png" style="float:left;width:250px;height:155px;border: 2px solid #2d3e67;"> which begins to spin and flatten into a circumstellar disk, and then the planets grow out of that disk with the Sun. A nebula contains gas, ice grains, and dust (including primordial nuclides). According to nebular theory, planetesimals formed by accretion, with the primordial Earth being estimated as likely taking anywhere from 70 to 100 million years to form.<br>
-
-                    Estimates of the age of the Moon range from 4.5 Ga to significantly younger. A leading hypothesis is that it was formed by accretion from material loosed from Earth after a Mars-sized object with about 10% of Earth's mass, named Theia, collided with Earth. It hit Earth with a glancing blow and some of its mass merged with Earth. Between approximately 4.1 and 3.8 Ga, numerous asteroid impacts during the Late Heavy Bombardment caused significant changes to the greater surface environment of the Moon and, by inference, to that of Earth.</p>
-            <br><h5>Size and shape</h5>
-                <p>The shape of Earth is nearly spherical,<img alt="" src="../media/anh-SolarSystem/traidat7.png" style="float:left;width:180px;height:155px;border: 2px solid #2d3e67;"> with an average diameter of 12,742 kilometers (7,918 mi), making it the fifth largest of the Solar System's planetary sized objects and largest among its terrestrial ones. Due to Earth's rotation its shape is bulged around the Equator and slightly flattened at the poles,[87] resulting in a 43 kilometers (27 mi) larger diameter at the equator than at the poles.[88] Earth's shape therefore is more accurately described as an oblate spheroid.<br>
-
-                    Earth's shape furthermore has local topographic variations. Though the largest variations, like the Mariana Trench (10,925 meters or 35,843 feet below local sea level),[89] only shortens Earth's average radius by 0.17% and Mount Everest (8,848 meters or 29,029 feet above local sea level) lengthens it by only 0.14%. Earth's surface is farthest out from Earth's center of mass at its equatorial bulge, making the summit of the Chimborazo volcano in Ecuador (6,384.4 km or 3,967.1 mi) the farthest point. Parallel to the rigid land topography the Ocean exhibits a more dynamic topography.<br>
-
-                    To measure the local variation of Earth's topography, geodesy employs an idealized Earth producing a shape called a geoid. Such a geoid shape is gained if the ocean is idealized, covering Earth completely and without any perturbations such as tides and winds. The result is a smooth but gravitational irregular geoid surface, providing a mean sea level (MSL) as a reference level for topographic measurements.</p>
+            <div  class="col-6 fadeInDown-anh" >
+                <select disabled style="opacity: 0; " name="content" id="content3" onchange="planet()"></select>
+                <h1 id="title1"></h1><hr>
+                <p id="contentc"></p>
             </div>
             <div class="col"></div>
             <div class="col-5 inf"><br><br><br>
@@ -330,5 +312,29 @@
     </div>
 </footer>
 <script src="../test/test.js"></script>
+
+<script type="text/javascript">
+    function planet(){
+        // Step 1: GET DATA FROM WEB API
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (){
+            // Step 2: Transfer to js object
+            var result = this.responseText;
+            var data = JSON.parse(result);
+            // end step 2
+            console.log(data);
+            // Step 3: using data
+            var id1 = data.title;
+            var id = document.getElementById("title1");
+            id.innerText = id1;
+            var temp = data.content;
+            var content = document.getElementById("contentc");
+            content.innerText = temp;
+        }
+        xhttp.open("GET",`http://localhost:5000/api/posts/detail?id=2`);
+        xhttp.send();
+    }
+    planet();
+</script>
 </body>
 </html>
