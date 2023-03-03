@@ -165,7 +165,7 @@ nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
-    font-family: Quantico;
+    font-family: Arial, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 13px;
@@ -391,6 +391,11 @@ button:hover{
     text-align: left;
     line-height: 1.2em;
 }
+.solar{
+    line-height: 1.5em;
+    text-align: left;
+}
+
 
 .hrr{
     border: 0;
