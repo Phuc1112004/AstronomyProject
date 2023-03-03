@@ -10,7 +10,7 @@ body{
     box-sizing: border-box;
     font-family: 'Labrada', serif;
     font-family: 'Noto Sans Tagbanwa', sans-serif;
-    font-family: 'Quicksand', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 section.section1{
@@ -1060,9 +1060,10 @@ span#procent-1::after, span#procent-2::after, span#procent-3::after, span#procen
     animation-duration: 1s;
     backface-visibility: visible !important;
 }
-.effect.showwwwww{
+.effect6.showwwwww{
     opacity: 1;
 }
+
  @keyframes flipInX{
     from {
         transform: perspective(400px) rotateX(90deg);
@@ -1087,7 +1088,21 @@ span#procent-1::after, span#procent-2::after, span#procent-3::after, span#procen
     to {
         transform: perspective(400px);
     }
+}/* Define the initial state of the element */
+.effect7 {
+    opacity: 0;
+    transform: translateX(100%);
 }
+
+/* Define the transition effect */
+.effect7.showwwwww {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s ease-out;
+}
+
+
+
 
 
 
