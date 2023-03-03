@@ -110,34 +110,10 @@
             </div>
 
             <div class="col"></div>
-            <div class="col-6 inf ">
-
-                <h3>Black Hole </h3> <hr><br>
-                <p>
-                   <strong> A black hole</strong>  is a region of space from which nothing, not even light, can escape. According to the general theory of relativity, it starts existing when spacetime gets curved by a huge mass. There is a sphere around the black hole. If something goes inside the sphere, it can not leave. This sphere is called the event horizon. A black hole is black because it absorbs all the light that hits it. It reflects nothing, just like a perfect black body in thermodynamics. Under quantum mechanics, black holes have a temperature and emit Hawking radiation, which makes them slowly get smaller.<br>
-
-                    Because black holes are very hard to see, people find them by the way they affect other things near them. The place where there is a black hole can be found by tracking the movement of stars that orbit somewhere in space. Or people can find it when gas falls into a black hole, because the gas heats up and is very bright. This can be found by telescopes on Earth or by Earth-orbiting telescopes. Inside a black hole the rules of physics are very different.<br>
-
-                    Astronomers have found evidence of supermassive black holes at the center of almost all galaxies. In 2008 astronomers found evidence that a supermassive black hole of more than four million solar masses is near the Sagittarius A* part of the Milky Way galaxy.
-                </p>
-                <br><h5>Formation of black holes</h5>
-                <p>
-                    The gravitational collapse of huge (high-mass) stars cause "stellar mass" black holes. Star formation in the early universe may have created very big stars. When they collapsed they made black holes of up to 10<sup>3</sup> solar masses. These black holes may be the seeds of the supermassive black holes found in the centers of most galaxies.<br>
-
-                    Most of the energy released in gravitational collapse is given off very quickly. A distant observer sees the material falling in slowly and then stop just above the event horizon because of gravitational time dilation. The light given off just before the event horizon is delayed an infinite amount of time. So the observer never sees the formation of the event horizon. Instead, the collapsing material seems to become dimmer and increasingly red-shifted, eventually fading away.
-                </p>
-                <br><h5>Properties of black holes</h5>
-                <p>
-                    The no hair theorem states that a stable black hole has only three independent physical properties: mass, charge, and angular momentum. If this is true, then any two black holes that have the same values for these three properties will look the same. As of 2020, it is unclear if the no hair theorem is true for real black holes.<br>
-
-                    The properties are special, because all three can be measured from outside the black hole. For example, a charged black hole repels other like charges just like any other charged object. Similarly, the total mass inside a sphere containing a black hole can be found by using the gravitational analog of Gauss's law, far away from the black hole. The angular momentum or spin can also be measured from far away.
-                </p>
-                <br><h5>Hawking radiation</h5>
-                <p>
-                    Hawking radiation is black body radiation which is emitted by black hole, due to quantum effects near the event horizon. It is named after the physicist Stephen Hawking, who provided a theoretical argument for its existence in 1974.<br>
-
-                    Hawking radiation reduces the mass and the energy of the black hole and is therefore also known as black hole evaporation. This happens because of the virtual particle-antiparticle pairs. Due to quantum fluctuations, this is when one of the particles falls in and the other gets away with the energy/mass. Because of this, black holes that lose more mass than they gain through other means are expected to shrink and ultimately vanish. Micro black holes (MBHs) are predicted to be larger net emitters of radiation than larger black holes and should shrink and dissipate faster.
-                </p>
+            <div  class="col-6 inf" >
+                <select disabled style="opacity: 0; " name="content" id="content3" onchange="planet()"></select>
+                <h1 id="title1"></h1><hr>
+                <p id="contentc"></p>
             </div>
     </div>
     </div>
@@ -264,5 +240,29 @@
     </div>
 </footer>
 <script src="../test/test.js"></script>
+
+<script type="text/javascript">
+    function planet(){
+        // Step 1: GET DATA FROM WEB API
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (){
+            // Step 2: Transfer to js object
+            var result = this.responseText;
+            var data = JSON.parse(result);
+            // end step 2
+            console.log(data);
+            // Step 3: using data
+            var id1 = data.title;
+            var id = document.getElementById("title1");
+            id.innerText = id1;
+            var temp = data.content;
+            var content = document.getElementById("contentc");
+            content.innerText = temp;
+        }
+        xhttp.open("GET",`http://localhost:5000/api/posts/detail?id=11`);
+        xhttp.send();
+    }
+    planet();
+</script>
 </body>
 </html>

@@ -111,27 +111,10 @@
             </div>
 
             <div class="col"></div>
-            <div class="col-6 inf ">
-
-                <h3>Nebula </h3> <hr><br>
-                <p>
-                    <strong>A nebula</strong> is a distinct luminescent part of interstellar medium, which can consist of ionized, neutral or molecular hydrogen and also cosmic dust. Nebulae are often star-forming regions, such as in the "Pillars of Creation" in the Eagle Nebula. In these regions, the formations of gas, dust, and other materials "clump" together to form denser regions, which attract further matter, and eventually will become dense enough to form stars. The remaining material is then thought to form planets and other planetary system objects.<br>
-
-                    Most nebulae are of vast size; some are hundreds of light-years in diameter. A nebula that is visible to the human eye from Earth would appear larger, but no brighter, from close by. The Orion Nebula, the brightest nebula in the sky and occupying an area twice the angular diameter of the full Moon, can be viewed with the naked eye but was missed by early astronomers. Although denser than the space surrounding them, most nebulae are far less dense than any vacuum created on Earth – a nebular cloud the size of the Earth would have a total mass of only a few kilograms. Earth's air has a density of approximately 1019 molecules per cubic centimeter; by contrast the densest nebulae can have densities of 10,000 molecules per cubic centimeter. Many nebulae are visible due to fluorescence caused by embedded hot stars, while others are so diffused that they can be detected only with long exposures and special filters. Some nebulae are variably illuminated by T Tauri variable stars.<br>
-
-                    Originally, the term "nebula" was used to describe any diffused astronomical object, including galaxies beyond the Milky Way. The Andromeda Galaxy, for instance, was once referred to as the Andromeda Nebula (and spiral galaxies in general as "spiral nebulae") before the true nature of galaxies was confirmed in the early 20th century by Vesto Slipher, Edwin Hubble and others. Edwin Hubble discovered that most nebulae are associated with stars and illuminated by starlight. He also helped categorize nebulae based on the type of light spectra they produced.
-                </p><br>
-                <h5>Formation</h5>
-                <p>
-                    There are a variety of formation mechanisms for the different types of nebulae. Some nebulae form from gas that is already in the interstellar medium while others are produced by stars. Examples of the former case are giant molecular clouds, the coldest, densest phase of interstellar gas, which can form by the cooling and condensation of more diffuse gas. Examples of the latter case are planetary nebulae formed from material shed by a star in late stages of its stellar evolution.<br>
-
-                    Star-forming regions are a class of emission nebula associated with giant molecular clouds. These form as a molecular cloud collapses under its own weight, producing stars. Massive stars may form in the center, and their ultraviolet radiation ionizes the surrounding gas, making it visible at optical wavelengths. The region of ionized hydrogen surrounding the massive stars is known as an H II region while the shells of neutral hydrogen surrounding the H II region are known as photodissociation region. Examples of star-forming regions are the Orion Nebula, the Rosette Nebula and the Omega Nebula. Feedback from star-formation, in the form of supernova explosions of massive stars, stellar winds or ultraviolet radiation from massive stars, or outflows from low-mass stars may disrupt the cloud, destroying the nebula after several million years.<br>
-
-                    Other nebulae form as the result of supernova explosions; the death throes of massive, short-lived stars. The materials thrown off from the supernova explosion are then ionized by the energy and the compact object that its core produces. One of the best examples of this is the Crab Nebula, in Taurus. The supernova event was recorded in the year 1054 and is labeled SN 1054. The compact object that was created after the explosion lies in the center of the Crab Nebula and its core is now a neutron star.<br>
-
-                    Still other nebulae form as planetary nebulae. This is the final stage of a low-mass star's life, like Earth's Sun. Stars with a mass up to 8–10 solar masses evolve into red giants and slowly lose their outer layers during pulsations in their atmospheres. When a star has lost enough material, its temperature increases and the ultraviolet radiation it emits can ionize the surrounding nebula that it has thrown off. The Sun will produce a planetary nebula and its core will remain behind in the form of a white dwarf.
-                </p>
-
+            <div  class="col-6 inf" >
+                <select disabled style="opacity: 0; " name="content" id="content3" onchange="planet()"></select>
+                <h1 id="title1"></h1><hr>
+                <p id="contentc"></p>
             </div>
         </div>
     </div>
@@ -258,5 +241,29 @@
     </div>
 </footer>
 <script src="../test/test.js"></script>
+
+<script type="text/javascript">
+    function planet(){
+        // Step 1: GET DATA FROM WEB API
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (){
+            // Step 2: Transfer to js object
+            var result = this.responseText;
+            var data = JSON.parse(result);
+            // end step 2
+            console.log(data);
+            // Step 3: using data
+            var id1 = data.title;
+            var id = document.getElementById("title1");
+            id.innerText = id1;
+            var temp = data.content;
+            var content = document.getElementById("contentc");
+            content.innerText = temp;
+        }
+        xhttp.open("GET",`http://localhost:5000/api/posts/detail?id=14`);
+        xhttp.send();
+    }
+    planet();
+</script>
 </body>
 </html>

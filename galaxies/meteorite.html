@@ -111,25 +111,10 @@
             </div>
 
             <div class="col"></div>
-            <div class="col-6 inf ">
-
-                <h3>Meteorite </h3> <hr><br>
-                <p>
-                     <strong> A meteorite</strong> is a solid piece of debris from an object, such as a comet, asteroid, or meteoroid, that originates in outer space and survives its passage through the atmosphere to reach the surface of a planet or moon. When the original object enters the atmosphere, various factors such as friction, pressure, and chemical interactions with the atmospheric gases cause it to heat up and radiate energy. It then becomes a meteor and forms a fireball, also known as a shooting star; astronomers call the brightest examples "bolides". Once it settles on the larger body's surface, the meteor becomes a meteorite. Meteorites vary greatly in size. For geologists, a bolide is a meteorite large enough to create an impact crater.<br>
-
-                    Meteorites that are recovered after being observed as they transit the atmosphere and impact the Earth are called meteorite falls. All others are known as meteorite finds.<br>
-
-                    Meteorites have traditionally been divided into three broad categories: stony meteorites that are rocks, mainly composed of silicate minerals; iron meteorites that are largely composed of ferronickel; and stony-iron meteorites that contain large amounts of both metallic and rocky material. Modern classification schemes divide meteorites into groups according to their structure, chemical and isotopic composition and mineralogy. "Meteorites" less than ~1 mm in diameter are classified as micrometeorites, however micrometeorites differ from meteorites in that they typically melt completely in the atmosphere and fall to Earth as quenched droplets. Extraterrestrial meteorites have been found on the Moon and on Mars.
-                </p><br>
-                <h4>Weathering</h4>
-                <p>Most meteorites date from the early Solar System and are by far the oldest extant material on Earth. Analysis of terrestrial weathering due to water, salt, oxygen, etc. is used to quantify the degree of alteration that a meteorite has experienced. Several qualitative weathering indices have been applied to Antarctic and desertic samples.<br>
-
-                    The most commonly employed weathering scale, used for ordinary chondrites, ranges from W0 (pristine state) to W6 (heavy alteration).</p>
-                <br>
-                <h5>Fossil meteorites</h5>
-                <p>
-                    "Fossil" meteorites are sometimes discovered by geologists. They represent the highly weathered remains of meteorites that fell to Earth in the remote past and were preserved in sedimentary deposits sufficiently well that they can be recognized through mineralogical and geochemical studies. The Thorsberg limestone quarry in Sweden has produced an anomalously large number – exceeding one hundred – fossil meteorites from the Ordovician, nearly all of which are highly weathered L-chondrites that still resemble the original meteorite under a petrographic microscope, but which have had their original material almost entirely replaced by terrestrial secondary mineralization. The extraterrestrial provenance was demonstrated in part through isotopic analysis of relict spinel grains, a mineral that is common in meteorites, is insoluble in water, and is able to persist chemically unchanged in the terrestrial weathering environment. Scientists believe that these meteorites, which have all also been found in Russia and China, all originated from the same source, a collision that occurred somewhere between Jupiter and Mars.[32][33][34][35] One of these fossil meteorites, dubbed Österplana 065, appears to represent a distinct type of meteorite that is "extinct" in the sense that it is no longer falling to Earth, the parent body having already been completely depleted from the reservoir of near-Earth objects.
-                </p>
+            <div  class="col-6 inf" >
+                <select disabled style="opacity: 0; " name="content" id="content3" onchange="planet()"></select>
+                <h1 id="title1"></h1><hr>
+                <p id="contentc"></p>
             </div>
         </div>
     </div>
@@ -256,5 +241,29 @@
     </div>
 </footer>
 <script src="../test/test.js"></script>
+
+<script type="text/javascript">
+    function planet(){
+        // Step 1: GET DATA FROM WEB API
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (){
+            // Step 2: Transfer to js object
+            var result = this.responseText;
+            var data = JSON.parse(result);
+            // end step 2
+            console.log(data);
+            // Step 3: using data
+            var id1 = data.title;
+            var id = document.getElementById("title1");
+            id.innerText = id1;
+            var temp = data.content;
+            var content = document.getElementById("contentc");
+            content.innerText = temp;
+        }
+        xhttp.open("GET",`http://localhost:5000/api/posts/detail?id=13`);
+        xhttp.send();
+    }
+    planet();
+</script>
 </body>
 </html>
