@@ -45,29 +45,6 @@ section.section1 {
     }
 }
 
-.dong{
-    transform: translate(1200%,450%);
-    width: 5px;
-    height: 0;
-    background-image: url("../media/astronaut.png");
-    position: relative;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-    margin-top: 200px;
-
-
-}
-@keyframes example{
-    0%   {background-image:url("../media/astronaut.png");right:0; top:0;}
-    25%  {background-image:url("../media/astronaut.png"); right:30px; top:0;}
-    50%  {background-image:url("../media/astronaut.png"); right:30px; top:30px;}
-    75%  {background-image:url("../media/astronaut.png"); right:0; top:30px;}
-    100% {background-image:url("../media/astronaut.png"); right:0; top:0;}
-}
-
 
 nav.transparent{
     position: fixed;
@@ -110,7 +87,7 @@ nav ul li{
     list-style: none;
     font-size: 90%;
 }
-nav ul li a{
+nav ul li a {
     position: relative;
     display: block;
     height: 80px;
@@ -121,6 +98,7 @@ nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
+    font-family: Arial, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 13px;
