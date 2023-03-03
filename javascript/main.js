@@ -187,7 +187,6 @@ $(document).ready(function() {
 const target = document.querySelector('#canvas-1');
 const target0 = document.getElementById('intro');
 
-
 // Create an Intersection Observer instance
 const observer = new IntersectionObserver(entries => {
     // Loop through the entries array
@@ -201,16 +200,42 @@ const observer = new IntersectionObserver(entries => {
             arcMove(40, 'canvas-2', 'procent-2');
             arcMove(20, 'canvas-3', 'procent-3');
             arcMove(50, 'canvas-4', 'procent-4');
-            target0.classList.add('fadeInDown');
 
-
-}
+            target0.classList.add('animate__animated', 'animate__fadeInDown');
+            target1.classList.add('animate__animated', 'animate__slideInUp');
+        } else {
+            // Target element is leaving the viewport, remove the classes
+            target0.classList.remove('animate__animated', 'animate__fadeInDown');
+            target1.classList.remove('animate__animated', 'animate__slideInUp');
+        }
     });
 });
 
-// Observe the target element
+// Observe the target elements
 observer.observe(target);
 observer.observe(target0);
+
+// thanh cuộn
+const effects = document.querySelectorAll('.effect');
+
+function animateEffects() {
+    effects.forEach((effect) => {
+        const effectTop = effect.offsetTop;
+        const effectHeight = effect.offsetHeight;
+        const scrollTop = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+
+        if (scrollTop > effectTop - windowHeight + effectHeight / 2) {
+            effect.classList.add('showwwwww');
+        } else {
+            effect.classList.remove('showwwwww');
+        }
+    });
+}
+
+animateEffects();
+
+window.addEventListener('scroll', animateEffects);
 
 
 

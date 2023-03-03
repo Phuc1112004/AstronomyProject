@@ -1004,6 +1004,92 @@ span#procent-1::after, span#procent-2::after, span#procent-3::after, span#procen
 #Circle{
     width: 100%;
 }
+.effect {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-out;
+}
+
+.effect.showwwwww {
+    opacity: 1;
+    transform: translateY(0);
+}
+.effect2 {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
+}
+
+.effect2.showwwwww {
+    opacity: 1;
+    transform: translateX(0);
+}
+.effect3 {
+    opacity: 0;
+    transform: rotate(180deg);
+    transition: all 1s ease-out;
+}
+
+.effect3.showwwwww {
+    opacity: 1;
+    transform: rotate(0);
+}
+
+.effect4 {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 1s ease-out;
+}
+
+.effect4.showwwwww {
+    opacity: 1;
+    transform: scale(1);
+}
+.effect5 {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.effect5.showwwwww {
+    opacity: 1;
+    transform: translateY(0);
+}
+.effect6 {
+    animation-name: flipInX;
+    animation-duration: 1s;
+    backface-visibility: visible !important;
+}
+.effect.showwwwww{
+    opacity: 1;
+}
+ @keyframes flipInX{
+    from {
+        transform: perspective(400px) rotateX(90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotateX(-20deg);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotateX(10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotateX(-5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+
+
 
 
 
