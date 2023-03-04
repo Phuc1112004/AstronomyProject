@@ -2,9 +2,274 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../list/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font.css">
+    <link rel="stylesheet" href="solar-system.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="../javascript/main.js"></script>
+    <link rel="stylesheet" href="../home/home.css">
+    <link rel="stylesheet" href="solar-system.css">
+
 </head>
 <body>
 
+<nav class="navbar navbar-expand transparent " id="navbarSupportedContent">
+    <div class="container-fluid container-transparent">
+
+        <div class="brand collapse navbar-collapse">
+
+            <h2><img src="../media/logo/logo.jpg" style="width: 110px; height: 90px" alt=""></h2>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-transparent">
+            <li class="nav-item"><a class="active " aria-current="page" href="../home/home.html"> Home</a></li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="../solar-system/solar-system.html">SOLAR SYSTEM</a></button>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="../galaxies/galaxies.html">GALAXIES</a></button>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="../pages/contact.html">Contact</a></button>
+                </div>
+            </li>
+            &emsp;
+            <li>
+                <div class="search-box" style="padding-top: 20px ">
+                    <div class="container-search">
+                        <input type="search" id="search" placeholder="Search..." />
+                        <button class="icon"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<header>
+    <p style="font-size: 25px; float:left;padding-left: 12%;padding-top: 1%;">Space Technology </p>   <!--thay tên trang con-->
+    <p style="font-size: 11px;float: right;padding-right: 13%;padding-top: 2%;">
+        <a href="../home/home.html" style="color: #9eb4cc">Home</a>       // Rocket </p> <!--thay tên trang con-->
+</header>
+<br><br><br>
+
+<!--content-->
+<main>
+    <div class="container fight section-inf">
+        <div class="row" >
+            <div  class="col-6 fadeInDown-anh" >
+                <select disabled style="opacity: 0; " name="content" id="content3" onchange="planet()"></select>
+                <h1 id="title1"></h1><hr>
+                <p id="contentc"></p>
+            </div>
+            <div class="col"></div>
+            <div class="col-5 inf"><br><br><br>
+                <div class="image-big">
+                    <img id="selectedImage" src="../media/anh-SpaceTech/tenlua2.png" alt="">
+                </div>
+                <div class="image-onclick text-center">
+                    <img src="../media/anh-SpaceTech/tenlua2.png" onclick="showFormat(this)" alt="">
+                    <img src="../media/anh-SpaceTech/tenlua3.png" onclick="showFormat(this)" alt="">
+                    <img src="../media/anh-SpaceTech/tenlua4.png" onclick="showFormat(this)" alt="">
+                </div>
+                <div class="image-onclick text-center">
+                    <img src="../media/anh-SpaceTech/tenlua5.png" onclick="showFormat(this)" alt="">
+                    <img src="../media/anh-SpaceTech/tenlua6.png" onclick="showFormat(this)" alt="">
+                    <img src="../media/anh-SpaceTech/tenlua7.png" onclick="showFormat(this)" alt="">
+                    <div id="format"></div>
+                </div><hr><br>
+                <h3>The most asked question</h3><br>
+                <p>How many planets does the solar system have?</p>
+                <p>Is the earth the center of the universe?</p>
+                <p>What is the temperature of the planets?</p><br><br><hr><br>
+
+                <h3>Tags</h3>
+                <div class="tags"><br>
+                    <a href="solar-system.html">Planet</a>
+                    <a href="../galaxies/galaxies.html">Extrasolar</a>
+                    <a href="Huygens%20(spacecraft).html"> Huygens (spacecraft)</a>
+                    <a href="International-Space-Station.html">International Space Station</a>
+                    <a href="James-Webb-Space-Telescope.html">James Webb Space Telescope</a>
+                    <a href="mars-rover.html">Mars Rover</a>
+                    <a href="rocket.html">Rocket</a>
+                    <a href="satellite.html">Satellite</a>
+                    <a href="../pages/contact.html">Contact</a>
+                    <a href="../pages/about-us.html">About Us</a>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <div class="container p-2">
+        <h2>Related</h2>
+        <hr>
+        <div class="row">
+            <div class="col-3">
+                <div class="gallery-list image-smail">
+                    <div class="item image-container gallery-thumb" >
+                        <div class="gallery-thumb">
+                    <span class="thumbnail-caption-inner">
+                    <a href="mars-rover.html" class="fa fa-external-link fa-2x"></a>
+                </span>
+                        </div>
+                        <a href="#">
+                            <img src="../media/Mars%20Rover/anh5.jpg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="gallery-list image-smail">
+                    <div class="item image-container gallery-thumb" >
+                        <div class="gallery-thumb ">
+                    <span class="thumbnail-caption-inner ">
+                    <a href="../solar-system/James-Webb-Space-Telescope.html" class=" fa fa-external-link fa-2x"></a>
+                </span>
+                        </div>
+                        <a href="#">
+                            <img src="../media/James%20Webb%20Space%20Telescope/anh1.jpg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="gallery-list image-smail">
+                    <div class="item image-container gallery-thumb" >
+                        <div class="gallery-thumb">
+                    <span class="thumbnail-caption-inner">
+                    <a href="satellite.html" class="fa fa-external-link fa-2x"></a>
+                </span>
+                        </div>
+                        <a href="#">
+                            <img src="../media/anh-SpaceTech/vetinh2.png" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="gallery-list image-smail">
+                    <div class="item image-container gallery-thumb" >
+                        <div class="gallery-thumb">
+                    <span class="thumbnail-caption-inner">
+                    <a href="../solar-system/rocket.html" class="fa fa-external-link fa-2x"></a>
+                </span>
+                        </div>
+                        <a href="#">
+                            <img src="../media/anh-SpaceTech/img_16.png" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+<!--content end-->
+
+
+<!--footer cứ cop rồi gắn vào-->
+<footer class="text-center text-lg-start bg-light text-muted card-footer" ><br><hr>
+    <div class="container text-center text-md-start mt-5 ">
+        <div class="row mt-3">
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <a class="card-footercol-3" href="../home/home.html"><img src="../media/logo/logo.jpg" alt="..." style="width: 200px;height: 120px;padding-left: 10px"></a>
+                <p><i class="bi bi-globe-asia-australia" style="color: white;font-size: 20px"></i>&ensp;101 West Street, New York, NY 12345</p>
+
+                <p><i class="bi bi-telephone-inbound" style="color: white"></i>&ensp; +84 999 999 999 </p>
+                <p><i class="bi bi-envelope-open" style="color: white"></i>&ensp; abcd123@gmail.com</p>
+                <p><i class="bi bi-facebook"></i>&ensp;
+                    <i class="bi bi-twitter"></i>&ensp;
+                    <i class="bi bi-youtube"></i>&ensp;
+                    <i class="bi bi-instagram"></i>&ensp;
+                    <i class="bi bi-tiktok"></i>&ensp;
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4 table-hover">
+                <h4 class="text-uppercase fw-bold mb-4" style="color: whitesmoke">
+                    RECENT POSTS
+                </h4>
+                <h5 style="color: #babbbc">How many galaxies are in the known universe?</h5><br>
+                <p> Cloudy weather on titan is made of methane<br>
+                    Fusce vel mauris vel nulla pellentesque egestas. In vestibulum risus nec nisi...
+                    <br><br>August 6, 2014</p>
+            </div>
+
+            <div class="card col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
+                <div class="card-body" >
+                    <h5 class="card-title">Subscribe newsletter</h5>
+                    <p class="card-text" style="color: #4f5050">Enter your email to receive our latest update and offer !</p>
+                    <form class="mb-3" name="form" action="#" method="get">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]8,$">
+                        <br>
+                        <button style="background-color: #1e2125;width: 150px;height: 40px" ><h6 style="padding-top: 8px;color: white">SUBCRIBE NOW</h6></button>
+                    </form><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="text-center p-4" style="background: rgba(0,0,0,0.3);">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="#">PhucTrinh.com</a>
+    </div>
+</footer>
+<script src="../test/test.js"></script>
+
+<script type="text/javascript">
+    function planet(){
+        // Step 1: GET DATA FROM WEB API
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (){
+            // Step 2: Transfer to js object
+            var result = this.responseText;
+            var data = JSON.parse(result);
+            // end step 2
+            console.log(data);
+            // Step 3: using data
+            var id1 = data.title;
+            var id = document.getElementById("title1");
+            id.innerText = id1;
+            var temp = data.content;
+            var content = document.getElementById("contentc");
+            content.innerText = temp;
+        }
+        xhttp.open("GET",`http://localhost:5000/api/posts/detail?id=17`);
+        xhttp.send();
+    }
+    planet();
+</script>
 </body>
 </html>
