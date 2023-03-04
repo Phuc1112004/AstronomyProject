@@ -75,3 +75,9 @@ nav ul li a {
     font-style: normal;
     font-size: 13px;
 }
+
+main p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
