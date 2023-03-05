@@ -356,11 +356,26 @@ button:hover{
     font-family: 'Source Code Pro', monospace;
     font-size: 28px;
     color: rgb(249, 252, 253);
+    animation: animated-text 1.8s steps(30,end) 1.5s 1 both ;
+}
+.phuca {
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 28px;
+    color: rgb(249, 252, 253);
+    animation: animated-text 1.8s steps(30,end) 3s 1 both ;
+}
+.phucb {
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 28px;
+    color: rgb(249, 252, 253);
+    animation: animated-text 1.8s steps(30,end) 4.2s 1 both ;
 }
 
-.viet {
-    animation: animated-text 3s steps(30,end) 2s 1 normal both;
-}
+
 
 .image-container:hover .image-text {
     visibility: visible;
